@@ -23,8 +23,10 @@ Partial Class Menu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtHargaMakan = New System.Windows.Forms.TextBox()
-        Me.txtHargaMin = New System.Windows.Forms.TextBox()
+        Me.txtHargamakan = New System.Windows.Forms.TextBox()
+        Me.txtJenismakan = New System.Windows.Forms.TextBox()
+        Me.txtHargaMinum = New System.Windows.Forms.TextBox()
+        Me.txtJenisminum = New System.Windows.Forms.TextBox()
         Me.txtIdMenu = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -39,9 +41,7 @@ Partial Class Menu
         Me.btnExit = New System.Windows.Forms.Button()
         Me.DGV = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.btn_Pramusaji = New System.Windows.Forms.Button()
-        Me.txtJenismakan = New System.Windows.Forms.TextBox()
-        Me.txtJenisminum = New System.Windows.Forms.TextBox()
+        Me.btn_Pelanggan = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -49,10 +49,10 @@ Partial Class Menu
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.txtJenisminum)
+        Me.GroupBox1.Controls.Add(Me.txtHargamakan)
         Me.GroupBox1.Controls.Add(Me.txtJenismakan)
-        Me.GroupBox1.Controls.Add(Me.txtHargaMakan)
-        Me.GroupBox1.Controls.Add(Me.txtHargaMin)
+        Me.GroupBox1.Controls.Add(Me.txtHargaMinum)
+        Me.GroupBox1.Controls.Add(Me.txtJenisminum)
         Me.GroupBox1.Controls.Add(Me.txtIdMenu)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -66,19 +66,33 @@ Partial Class Menu
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Input_Menu"
         '
-        'txtHargaMakan
+        'txtHargamakan
         '
-        Me.txtHargaMakan.Location = New System.Drawing.Point(125, 152)
-        Me.txtHargaMakan.Name = "txtHargaMakan"
-        Me.txtHargaMakan.Size = New System.Drawing.Size(121, 20)
-        Me.txtHargaMakan.TabIndex = 7
+        Me.txtHargamakan.Location = New System.Drawing.Point(125, 87)
+        Me.txtHargamakan.Name = "txtHargamakan"
+        Me.txtHargamakan.Size = New System.Drawing.Size(121, 20)
+        Me.txtHargamakan.TabIndex = 9
         '
-        'txtHargaMin
+        'txtJenismakan
         '
-        Me.txtHargaMin.Location = New System.Drawing.Point(125, 117)
-        Me.txtHargaMin.Name = "txtHargaMin"
-        Me.txtHargaMin.Size = New System.Drawing.Size(121, 20)
-        Me.txtHargaMin.TabIndex = 6
+        Me.txtJenismakan.Location = New System.Drawing.Point(125, 57)
+        Me.txtJenismakan.Name = "txtJenismakan"
+        Me.txtJenismakan.Size = New System.Drawing.Size(121, 20)
+        Me.txtJenismakan.TabIndex = 8
+        '
+        'txtHargaMinum
+        '
+        Me.txtHargaMinum.Location = New System.Drawing.Point(125, 152)
+        Me.txtHargaMinum.Name = "txtHargaMinum"
+        Me.txtHargaMinum.Size = New System.Drawing.Size(121, 20)
+        Me.txtHargaMinum.TabIndex = 7
+        '
+        'txtJenisminum
+        '
+        Me.txtJenisminum.Location = New System.Drawing.Point(125, 117)
+        Me.txtJenisminum.Name = "txtJenisminum"
+        Me.txtJenisminum.Size = New System.Drawing.Size(121, 20)
+        Me.txtJenisminum.TabIndex = 6
         '
         'txtIdMenu
         '
@@ -90,7 +104,7 @@ Partial Class Menu
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(16, 152)
+        Me.Label5.Location = New System.Drawing.Point(16, 94)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(87, 13)
         Me.Label5.TabIndex = 4
@@ -99,7 +113,7 @@ Partial Class Menu
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(16, 124)
+        Me.Label4.Location = New System.Drawing.Point(20, 152)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 13)
         Me.Label4.TabIndex = 3
@@ -108,7 +122,7 @@ Partial Class Menu
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 94)
+        Me.Label3.Location = New System.Drawing.Point(20, 124)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(80, 13)
         Me.Label3.TabIndex = 2
@@ -204,35 +218,21 @@ Partial Class Menu
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detail_Menu"
         '
-        'btn_Pramusaji
+        'btn_Pelanggan
         '
-        Me.btn_Pramusaji.Location = New System.Drawing.Point(722, 324)
-        Me.btn_Pramusaji.Name = "btn_Pramusaji"
-        Me.btn_Pramusaji.Size = New System.Drawing.Size(84, 38)
-        Me.btn_Pramusaji.TabIndex = 12
-        Me.btn_Pramusaji.Text = "Next>>"
-        Me.btn_Pramusaji.UseVisualStyleBackColor = True
-        '
-        'txtJenismakan
-        '
-        Me.txtJenismakan.Location = New System.Drawing.Point(125, 57)
-        Me.txtJenismakan.Name = "txtJenismakan"
-        Me.txtJenismakan.Size = New System.Drawing.Size(121, 20)
-        Me.txtJenismakan.TabIndex = 8
-        '
-        'txtJenisminum
-        '
-        Me.txtJenisminum.Location = New System.Drawing.Point(125, 87)
-        Me.txtJenisminum.Name = "txtJenisminum"
-        Me.txtJenisminum.Size = New System.Drawing.Size(121, 20)
-        Me.txtJenisminum.TabIndex = 9
+        Me.btn_Pelanggan.Location = New System.Drawing.Point(665, 324)
+        Me.btn_Pelanggan.Name = "btn_Pelanggan"
+        Me.btn_Pelanggan.Size = New System.Drawing.Size(141, 38)
+        Me.btn_Pelanggan.TabIndex = 12
+        Me.btn_Pelanggan.Text = "Form Pelanggan"
+        Me.btn_Pelanggan.UseVisualStyleBackColor = True
         '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(860, 370)
-        Me.Controls.Add(Me.btn_Pramusaji)
+        Me.Controls.Add(Me.btn_Pelanggan)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnCancel)
@@ -251,8 +251,8 @@ Partial Class Menu
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtHargaMakan As System.Windows.Forms.TextBox
-    Friend WithEvents txtHargaMin As System.Windows.Forms.TextBox
+    Friend WithEvents txtHargaMinum As System.Windows.Forms.TextBox
+    Friend WithEvents txtJenisminum As System.Windows.Forms.TextBox
     Friend WithEvents txtIdMenu As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
@@ -267,7 +267,7 @@ Partial Class Menu
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents DGV As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtJenisminum As TextBox
+    Friend WithEvents txtHargamakan As TextBox
     Friend WithEvents txtJenismakan As TextBox
-    Friend WithEvents btn_Pramusaji As Button
+    Friend WithEvents btn_Pelanggan As Button
 End Class

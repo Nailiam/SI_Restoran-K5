@@ -5,25 +5,24 @@
     Sub KosongkanForm()
         txtIdMenu.Text = ""
         txtJenismakan.Text = ""
+        txtHargamakan.Text = ""
         txtJenisminum.Text = ""
-        txtHargaMin.Text = ""
-        txtHargaMakan.Text = ""
+        txtHargaMinum.Text = ""
         txtIdMenu.Focus()
     End Sub
     Sub MatikanForm()
         txtIdMenu.Enabled = False
         txtJenismakan.Enabled = False
+        txtHargamakan.Enabled = False
         txtJenisminum.Enabled = False
-        txtHargaMin.Enabled = False
-        txtHargaMakan.Enabled = False
+        txtHargaMinum.Enabled = False
     End Sub
     Sub HidupkanForm()
         txtIdMenu.Enabled = True
         txtJenismakan.Enabled = True
+        txtHargamakan.Enabled = True
         txtJenisminum.Enabled = True
-        txtHargaMin.Enabled = True
-        txtHargaMakan.Enabled = True
-
+        txtHargaMinum.Enabled = True
     End Sub
     Sub TampilkanData()
         Call koneksiDB()
@@ -32,6 +31,10 @@
         DA.Fill(DS)
         DGV.DataSource = DS.Tables(0)
         DGV.ReadOnly = True
+    End Sub
+    Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call MatikanForm()
+        Call TampilkanData()
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
@@ -53,7 +56,7 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If txtIdMenu.Text = "" Or txtJenismakan.Text = "" Or txtJenisminum.Text = "" Or txtHargaMin.Text = "" Or txtHargaMakan.Text = "" Then
+        If txtIdMenu.Text = "" Or txtJenismakan.Text = "" Or txtHargamakan.Text = "" Or txtJenisminum.Text = "" Or txtHargaMinum.Text = "" Then
             MsgBox("Data Buku Belum Lengkap")
             Exit Sub
 
@@ -67,8 +70,8 @@
                 Call koneksiDB()
                 Dim simpan As String
                 simpan = "insert into Menu values ('" & txtIdMenu.Text &
-               "', '" & txtJenismakan.Text & "', '" & txtJenisminum.Text & "','" &
-               txtHargaMin.Text & "','" & txtHargaMakan.Text & "')"
+               "', '" & txtJenismakan.Text & "', '" & txtHargamakan.Text & "','" &
+               txtJenisminum.Text & "','" & txtHargaMinum.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
                 MsgBox("Input Data Sukses")
@@ -85,24 +88,24 @@
         On Error Resume Next
         txtIdMenu.Text = DGV.Rows(e.RowIndex).Cells(0).Value
         txtJenismakan.Text = DGV.Rows(e.RowIndex).Cells(1).Value
-        txtJenisminum.Text = DGV.Rows(e.RowIndex).Cells(2).Value
-        txtHargaMin.Text = DGV.Rows(e.RowIndex).Cells(3).Value
-        txtHargaMakan.Text = DGV.Rows(e.RowIndex).Cells(4).Value
+        txtHargamakan.Text = DGV.Rows(e.RowIndex).Cells(2).Value
+        txtJenisminum.Text = DGV.Rows(e.RowIndex).Cells(3).Value
+        txtHargaMinum.Text = DGV.Rows(e.RowIndex).Cells(4).Value
 
         Call HidupkanForm()
         txtIdMenu.Enabled = False
     End Sub
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
-        If txtIdMenu.Text = "" Or txtJenismakan.Text = "" Or txtJenisminum.Text = "" Or txtHargaMin.Text = "" Or txtHargaMakan.Text = "" Then
+        If txtIdMenu.Text = "" Or txtJenismakan.Text = "" Or txtHargamakan.Text = "" Or txtJenisminum.Text = "" Or txtHargaMinum.Text = "" Then
             MsgBox("Data Menu Belum Lengkap")
             Exit Sub
 
         Else
             Call koneksiDB()
             CMD = New OleDb.OleDbCommand(" update Menu set Jenis_Makanan = '" &
-           txtJenismakan.Text & "', Jenis_Minuman = '" & txtJenisminum.Text & "', Harga_Minuman ='" & txtHargaMin.Text & "', Harga Makanan = '" &
-           txtHargaMakan.Text & "'  where Id_Menu ='" & txtIdMenu.Text & "'", Conn)
+           txtJenismakan.Text & "', Jenis_Minuman = '" & txtHargamakan.Text & "', Harga_Minuman ='" & txtJenisminum.Text & "', Harga Makanan = '" &
+           txtHargaMinum.Text & "'  where Id_Menu ='" & txtIdMenu.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
 
@@ -137,12 +140,7 @@
         End If
     End Sub
 
-    Private Sub btn_Pramusaji_Click(sender As Object, e As EventArgs) Handles btn_Pramusaji.Click
-        Pramusaji.Show()
-    End Sub
-
-    Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call MatikanForm()
-        Call TampilkanData()
+    Private Sub btn_Pelanggan_Click(sender As Object, e As EventArgs) Handles btn_Pelanggan.Click
+        Pelanggan.Show()
     End Sub
 End Class
