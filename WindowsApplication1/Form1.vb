@@ -1,6 +1,6 @@
 ﻿Public Class Menu
 
-    Private Property Id_Menu As Object
+    Private Property Id_Menu As Object ' MENU MAKANAN
 
     Sub KosongkanForm()
         txtIdMenu.Text = ""
@@ -23,7 +23,7 @@
         CmbMinuman.Enabled = True
         txtHargaMin.Enabled = True
         txtHargaMakan.Enabled = True
-        'Coding diatas untuk mulai menghidupkan form agar form bisa diisi
+        'Coding diatas untuk mulai menghidupkan form agar form bisa diisi 
     End Sub
     Sub TampilkanData()
         Call koneksiDB()
@@ -52,7 +52,8 @@
         Call HidupkanForm()
         Call KosongkanForm()
         ' Fungsi coding sama dengan diatas
-    End Sub
+    End Sub
+
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Call MatikanForm()
@@ -62,7 +63,7 @@
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If txtIdMenu.Text = "" Or CmbMakanan.Text = "" Or CmbMinuman.Text =
-"" Or txtHargaMin.Text = "" Or txtHargaMakan.Text = ""  Then
+"" Or txtHargaMin.Text = "" Or txtHargaMakan.Text = "" Then
             MsgBox("Data Buku Belum Lengkap")
             Exit Sub
             'Coding ini berfungsi untuk mengecek jika salah satu field dataada yang kosong , atau belum diisi , maka akan tampil pesan bahwa data yangdi input belum lengkap
@@ -98,7 +99,7 @@
         CmbMinuman.Text = DGV.Rows(e.RowIndex).Cells(2).Value
         txtHargaMin.Text = DGV.Rows(e.RowIndex).Cells(3).Value
         txtHargaMin.Text = DGV.Rows(e.RowIndex).Cells(4).Value
-        
+
         'Coding ini berfungsi , ketika kita mau mengedit data ,caranya kitaarahkan mouse ke salah satu cell yang di Data Grid View , maka data dari cell tersebut akan masuk ke dalam field yang ada form
         'Cell(0) , Cell(1) dst artinya : dimulai dari Cell ke O , 1 dan seterusnya()
         Call HidupkanForm()
@@ -106,7 +107,7 @@
     End Sub
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
-        If txtIdMenu.Text = "" Or CmbMakanan.Text = "" Or CmbMinuman.Text ="" Or txtHargaMin.Text = "" Or txtHargaMin.Text = "" Then
+        If txtIdMenu.Text = "" Or CmbMakanan.Text = "" Or CmbMinuman.Text = "" Or txtHargaMin.Text = "" Or txtHargaMin.Text = "" Then
             MsgBox("Data Menu Belum Lengkap")
             Exit Sub
             'Coding berfungsi untuk mengecek jika ada field yang belum terisiatau belum lengkap
@@ -121,7 +122,9 @@
         End If
         Call KosongkanForm()
         Call MatikanForm()
-        Call TampilkanData()        'Ini komen masuk github
+        Call TampilkanData()
+        'Ini komen masuk github
+
     End Sub
 
     Private Sub btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
