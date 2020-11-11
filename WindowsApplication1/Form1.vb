@@ -34,12 +34,6 @@
         DGV.ReadOnly = True
     End Sub
 
-    Private Sub Input_Menu_Enter(sender As Object, e As EventArgs) Handles Input_Menu.Enter
-        Call MatikanForm()
-        Call TampilkanData()
-
-    End Sub
-
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
 
@@ -143,7 +137,12 @@
         End If
     End Sub
 
-    Private Sub btnPramusaji_Click(sender As Object, e As EventArgs) Handles btnPramusaji.Click
-        Form_Pramusaji.Show()
+    Private Sub btn_Pramusaji_Click(sender As Object, e As EventArgs) Handles btn_Pramusaji.Click
+        Pramusaji.Show()
+    End Sub
+
+    Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call MatikanForm()
+        Call TampilkanData()
     End Sub
 End Class
