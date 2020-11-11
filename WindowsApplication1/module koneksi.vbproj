@@ -90,12 +90,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Koneksi.vb" />
-    <Compile Include="Melayani.Designer.vb">
-      <DependentUpon>Melayani.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Melayani.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -140,9 +134,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kasir.resx">
       <DependentUpon>Kasir.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Melayani.resx">
-      <DependentUpon>Melayani.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
