@@ -29,7 +29,7 @@
         DataGridView1.ReadOnly = True
     End Sub
     Private Sub Melayani_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Call MatikanForm()
+        Call MatikanForm() 'matikan form'
         Call TampilkanData()
     End Sub
 
