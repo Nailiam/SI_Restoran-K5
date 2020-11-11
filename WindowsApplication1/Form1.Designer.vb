@@ -220,7 +220,7 @@ Partial Class Menu
         '
         'btn_Pelanggan
         '
-        Me.btn_Pelanggan.Location = New System.Drawing.Point(665, 324)
+        Me.btn_Pelanggan.Location = New System.Drawing.Point(695, 320)
         Me.btn_Pelanggan.Name = "btn_Pelanggan"
         Me.btn_Pelanggan.Size = New System.Drawing.Size(141, 38)
         Me.btn_Pelanggan.TabIndex = 12

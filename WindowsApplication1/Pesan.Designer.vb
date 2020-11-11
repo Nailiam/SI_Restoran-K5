@@ -43,6 +43,7 @@ Partial Class Pesan
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -237,11 +238,21 @@ Partial Class Pesan
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Kode Pemesanan"
         '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(674, 375)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(100, 28)
+        Me.Button7.TabIndex = 16
+        Me.Button7.Text = "Form Kasir"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'Pesan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 386)
+        Me.ClientSize = New System.Drawing.Size(800, 426)
+        Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -281,4 +292,5 @@ Partial Class Pesan
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button7 As Button
 End Class

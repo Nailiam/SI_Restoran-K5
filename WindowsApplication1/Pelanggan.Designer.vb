@@ -37,6 +37,7 @@ Partial Class Pelanggan
         Me.btn_delete = New System.Windows.Forms.Button()
         Me.btn_cancel = New System.Windows.Forms.Button()
         Me.btn_exit = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -177,11 +178,21 @@ Partial Class Pelanggan
         Me.btn_exit.Text = "EXIT"
         Me.btn_exit.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(624, 291)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(107, 23)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "FORM PESAN"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Pelanggan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(758, 346)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_cancel)
         Me.Controls.Add(Me.btn_delete)
@@ -215,4 +226,5 @@ Partial Class Pelanggan
     Friend WithEvents btn_delete As Button
     Friend WithEvents btn_cancel As Button
     Friend WithEvents btn_exit As Button
+    Friend WithEvents Button1 As Button
 End Class

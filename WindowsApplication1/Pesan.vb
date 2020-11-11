@@ -122,4 +122,8 @@
         Call HidupkanForm()
         kode_pemesanan.Enabled = False
     End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Bayar.Show()
+    End Sub
 End Class
