@@ -64,13 +64,13 @@
             Exit Sub
 
         Else
-            Call KoneksiDB()
+            Call koneksiDB()
             CMD = New OleDb.OleDbCommand(" select * from Menu where Id_Menu='" & txtIdMenu.Text & "'", Conn)
             DM = CMD.ExecuteReader
             DM.Read()
 
             If Not DM.HasRows Then
-                Call KoneksiDB()
+                Call koneksiDB()
                 Dim simpan As String
                 simpan = "insert into Menu values ('" & txtIdMenu.Text &
                "', '" & txtJenismakan.Text & "', '" & txtJenisminum.Text & "','" &
@@ -129,7 +129,7 @@
            "Konfirmasi", MessageBoxButtons.YesNoCancel) = Windows.Forms.DialogResult.Yes Then
 
 
-                Call KoneksiDB()
+                Call koneksiDB()
                 CMD = New OleDb.OleDbCommand(" delete from Menu where Id_Menu ='" & txtIdMenu.Text & "'", Conn)
                 DM = CMD.ExecuteReader
                 MsgBox("Hapus Data Berhasil")
