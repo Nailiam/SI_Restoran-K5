@@ -110,7 +110,7 @@
                 Call TampilkanData()
             End If
         End If
-    End Sub
+    End Sub 'akhir sub'
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
