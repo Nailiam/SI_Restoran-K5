@@ -23,8 +23,6 @@ Partial Class Menu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CmbMinuman = New System.Windows.Forms.ComboBox()
-        Me.CmbMakanan = New System.Windows.Forms.ComboBox()
         Me.txtHargaMakan = New System.Windows.Forms.TextBox()
         Me.txtHargaMin = New System.Windows.Forms.TextBox()
         Me.txtIdMenu = New System.Windows.Forms.TextBox()
@@ -40,12 +38,10 @@ Partial Class Menu
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.DGV = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btn_Pramusaji = New System.Windows.Forms.Button()
+        Me.txtJenismakan = New System.Windows.Forms.TextBox()
+        Me.txtJenisminum = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -53,8 +49,8 @@ Partial Class Menu
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.CmbMinuman)
-        Me.GroupBox1.Controls.Add(Me.CmbMakanan)
+        Me.GroupBox1.Controls.Add(Me.txtJenisminum)
+        Me.GroupBox1.Controls.Add(Me.txtJenismakan)
         Me.GroupBox1.Controls.Add(Me.txtHargaMakan)
         Me.GroupBox1.Controls.Add(Me.txtHargaMin)
         Me.GroupBox1.Controls.Add(Me.txtIdMenu)
@@ -69,22 +65,6 @@ Partial Class Menu
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Input_Menu"
-        '
-        'CmbMinuman
-        '
-        Me.CmbMinuman.FormattingEnabled = True
-        Me.CmbMinuman.Location = New System.Drawing.Point(125, 91)
-        Me.CmbMinuman.Name = "CmbMinuman"
-        Me.CmbMinuman.Size = New System.Drawing.Size(121, 21)
-        Me.CmbMinuman.TabIndex = 9
-        '
-        'CmbMakanan
-        '
-        Me.CmbMakanan.FormattingEnabled = True
-        Me.CmbMakanan.Location = New System.Drawing.Point(125, 64)
-        Me.CmbMakanan.Name = "CmbMakanan"
-        Me.CmbMakanan.Size = New System.Drawing.Size(121, 21)
-        Me.CmbMakanan.TabIndex = 8
         '
         'txtHargaMakan
         '
@@ -102,7 +82,7 @@ Partial Class Menu
         '
         'txtIdMenu
         '
-        Me.txtIdMenu.Location = New System.Drawing.Point(125, 35)
+        Me.txtIdMenu.Location = New System.Drawing.Point(125, 28)
         Me.txtIdMenu.Name = "txtIdMenu"
         Me.txtIdMenu.Size = New System.Drawing.Size(121, 20)
         Me.txtIdMenu.TabIndex = 5
@@ -209,36 +189,10 @@ Partial Class Menu
         'DGV
         '
         Me.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
         Me.DGV.Location = New System.Drawing.Point(15, 28)
         Me.DGV.Name = "DGV"
         Me.DGV.Size = New System.Drawing.Size(456, 230)
         Me.DGV.TabIndex = 10
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Id_Menu"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Jenis_Makanan"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Jenis_Minuman"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Harga_Minuman"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Harga_Minuman"
-        Me.Column5.Name = "Column5"
         '
         'GroupBox2
         '
@@ -250,11 +204,35 @@ Partial Class Menu
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detail_Menu"
         '
+        'btn_Pramusaji
+        '
+        Me.btn_Pramusaji.Location = New System.Drawing.Point(722, 324)
+        Me.btn_Pramusaji.Name = "btn_Pramusaji"
+        Me.btn_Pramusaji.Size = New System.Drawing.Size(84, 38)
+        Me.btn_Pramusaji.TabIndex = 12
+        Me.btn_Pramusaji.Text = "Next>>"
+        Me.btn_Pramusaji.UseVisualStyleBackColor = True
+        '
+        'txtJenismakan
+        '
+        Me.txtJenismakan.Location = New System.Drawing.Point(125, 57)
+        Me.txtJenismakan.Name = "txtJenismakan"
+        Me.txtJenismakan.Size = New System.Drawing.Size(121, 20)
+        Me.txtJenismakan.TabIndex = 8
+        '
+        'txtJenisminum
+        '
+        Me.txtJenisminum.Location = New System.Drawing.Point(125, 87)
+        Me.txtJenisminum.Name = "txtJenisminum"
+        Me.txtJenisminum.Size = New System.Drawing.Size(121, 20)
+        Me.txtJenisminum.TabIndex = 9
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(860, 324)
+        Me.ClientSize = New System.Drawing.Size(860, 370)
+        Me.Controls.Add(Me.btn_Pramusaji)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnCancel)
@@ -273,8 +251,6 @@ Partial Class Menu
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents CmbMinuman As System.Windows.Forms.ComboBox
-    Friend WithEvents CmbMakanan As System.Windows.Forms.ComboBox
     Friend WithEvents txtHargaMakan As System.Windows.Forms.TextBox
     Friend WithEvents txtHargaMin As System.Windows.Forms.TextBox
     Friend WithEvents txtIdMenu As System.Windows.Forms.TextBox
@@ -290,11 +266,8 @@ Partial Class Menu
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents DGV As System.Windows.Forms.DataGridView
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-
+    Friend WithEvents txtJenisminum As TextBox
+    Friend WithEvents txtJenismakan As TextBox
+    Friend WithEvents btn_Pramusaji As Button
 End Class
