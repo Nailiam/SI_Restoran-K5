@@ -2,9 +2,6 @@
     Private Sub Pesan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call MatikanForm()
         Call TampilkanData()
-        DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.CustomFormat = "dddd, dd/MM/yyyy"
-        DateTimePicker1.Value = Format(Now)
     End Sub
     Sub KosongkanForm()
         kode_pemesanan.Text = ""
@@ -116,10 +113,12 @@
         On Error Resume Next
         kode_pemesanan.Text = DataGridView1.Rows(e.RowIndex).Cells(0).Value
         nama_pemesan.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value
-
-        jumlah_pemesanan.Text = DataGridView1.Rows(e.RowIndex).Cells(2).Value
-        harga_makanan.Text = DataGridView1.Rows(e.RowIndex).Cells(3).Value
-        harga_minuman.Text = DataGridView1.Rows(e.RowIndex).Cells(4).Value
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.CustomFormat = "dddd, dd/MM/yyyy"
+        DateTimePicker1.Value = Format(DataGridView1.Rows(e.RowIndex).Cells(2).Value)
+        jumlah_pemesanan.Text = DataGridView1.Rows(e.RowIndex).Cells(3).Value
+        harga_makanan.Text = DataGridView1.Rows(e.RowIndex).Cells(4).Value
+        harga_minuman.Text = DataGridView1.Rows(e.RowIndex).Cells(5).Value
         Call HidupkanForm()
         kode_pemesanan.Enabled = False
     End Sub
