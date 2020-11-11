@@ -118,12 +118,6 @@
     <Compile Include="Pesan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pramusaji.Designer.vb">
-      <DependentUpon>Pramusaji.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Pramusaji.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Bayar.resx">
@@ -146,9 +140,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pesan.resx">
       <DependentUpon>Pesan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pramusaji.resx">
-      <DependentUpon>Pramusaji.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
