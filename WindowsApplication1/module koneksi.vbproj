@@ -76,6 +76,12 @@
     <Compile Include="Bayar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form Menu Minuman.Designer.vb">
+      <DependentUpon>Form Menu Minuman.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Menu Minuman.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Bayar.resx">
       <DependentUpon>Bayar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Menu Minuman.resx">
+      <DependentUpon>Form Menu Minuman.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
