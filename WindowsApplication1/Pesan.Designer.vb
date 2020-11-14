@@ -22,12 +22,12 @@ Partial Class Pesan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnexit = New System.Windows.Forms.Button()
+        Me.cancel = New System.Windows.Forms.Button()
+        Me.delete = New System.Windows.Forms.Button()
+        Me.edit = New System.Windows.Forms.Button()
+        Me.save = New System.Windows.Forms.Button()
+        Me.input = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -45,59 +45,59 @@ Partial Class Pesan
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Button6
+        'btnexit
         '
-        Me.Button6.Location = New System.Drawing.Point(220, 280)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(57, 28)
-        Me.Button6.TabIndex = 15
-        Me.Button6.Text = "Exit"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.btnexit.Location = New System.Drawing.Point(220, 280)
+        Me.btnexit.Name = "btnexit"
+        Me.btnexit.Size = New System.Drawing.Size(57, 28)
+        Me.btnexit.TabIndex = 15
+        Me.btnexit.Text = "Exit"
+        Me.btnexit.UseVisualStyleBackColor = True
         '
-        'Button5
+        'cancel
         '
-        Me.Button5.Location = New System.Drawing.Point(136, 280)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(57, 28)
-        Me.Button5.TabIndex = 14
-        Me.Button5.Text = "Cancel"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.cancel.Location = New System.Drawing.Point(136, 280)
+        Me.cancel.Name = "cancel"
+        Me.cancel.Size = New System.Drawing.Size(57, 28)
+        Me.cancel.TabIndex = 14
+        Me.cancel.Text = "Cancel"
+        Me.cancel.UseVisualStyleBackColor = True
         '
-        'Button4
+        'delete
         '
-        Me.Button4.Location = New System.Drawing.Point(51, 280)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(57, 28)
-        Me.Button4.TabIndex = 13
-        Me.Button4.Text = "Delete"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.delete.Location = New System.Drawing.Point(51, 280)
+        Me.delete.Name = "delete"
+        Me.delete.Size = New System.Drawing.Size(57, 28)
+        Me.delete.TabIndex = 13
+        Me.delete.Text = "Delete"
+        Me.delete.UseVisualStyleBackColor = True
         '
-        'Button3
+        'edit
         '
-        Me.Button3.Location = New System.Drawing.Point(220, 230)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(57, 28)
-        Me.Button3.TabIndex = 12
-        Me.Button3.Text = "Edit"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.edit.Location = New System.Drawing.Point(220, 230)
+        Me.edit.Name = "edit"
+        Me.edit.Size = New System.Drawing.Size(57, 28)
+        Me.edit.TabIndex = 12
+        Me.edit.Text = "Edit"
+        Me.edit.UseVisualStyleBackColor = True
         '
-        'Button2
+        'save
         '
-        Me.Button2.Location = New System.Drawing.Point(136, 230)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(57, 28)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Save"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.save.Location = New System.Drawing.Point(136, 230)
+        Me.save.Name = "save"
+        Me.save.Size = New System.Drawing.Size(57, 28)
+        Me.save.TabIndex = 11
+        Me.save.Text = "Save"
+        Me.save.UseVisualStyleBackColor = True
         '
-        'Button1
+        'input
         '
-        Me.Button1.Location = New System.Drawing.Point(51, 230)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(57, 28)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Input"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.input.Location = New System.Drawing.Point(51, 230)
+        Me.input.Name = "input"
+        Me.input.Size = New System.Drawing.Size(57, 28)
+        Me.input.TabIndex = 10
+        Me.input.Text = "Input"
+        Me.input.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -213,12 +213,12 @@ Partial Class Pesan
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 406)
         Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnexit)
+        Me.Controls.Add(Me.cancel)
+        Me.Controls.Add(Me.delete)
+        Me.Controls.Add(Me.edit)
+        Me.Controls.Add(Me.save)
+        Me.Controls.Add(Me.input)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Pesan"
@@ -231,12 +231,12 @@ Partial Class Pesan
 
     End Sub
 
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnexit As Button
+    Friend WithEvents cancel As Button
+    Friend WithEvents delete As Button
+    Friend WithEvents edit As Button
+    Friend WithEvents save As Button
+    Friend WithEvents input As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents GroupBox1 As GroupBox

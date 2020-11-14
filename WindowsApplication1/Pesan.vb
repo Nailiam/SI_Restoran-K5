@@ -27,27 +27,27 @@
         DataGridView1.ReadOnly = True
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles input.Click
         Call HidupkanForm()
         Call KosongkanForm()
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles cancel.Click
         Call MatikanForm()
         Call KosongkanForm()
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnexit.Click
         Me.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles save.Click
         If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or jumlah_pemesanan.Text = "" Then
             MsgBox("Data Pesanan Belum Lengkap")
             Exit Sub
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand(" select * from Pesan where kode_pesanan ='" & kode_pemesanan.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand(" select * from Pesan where kode_Pesanan ='" & kode_pemesanan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             DM.Read()
             If Not DM.HasRows Then
@@ -67,14 +67,14 @@
         End If
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles edit.Click
         If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or jumlah_pemesanan.Text = "" Then
             MsgBox("Data Pesanan Belum Lengkap")
             Exit Sub
         Else
             Call koneksiDB()
             CMD = New OleDb.OleDbCommand("update Pesan set ID_Pelanggan = '" &
-           ID_Pelanggan.Text & "', jumlah_pesanan = '" & jumlah_pemesanan.Text & "' where kode_pesanan ='" & kode_pemesanan.Text & "'", Conn)
+           ID_Pelanggan.Text & "', Jumlah_Pesanan = '" & jumlah_pemesanan.Text & "' where kode_Pesanan ='" & kode_pemesanan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
         End If
@@ -83,14 +83,14 @@
         Call TampilkanData()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles delete.Click
         If kode_pemesanan.Text = "" Then
             MsgBox("Tidak ada data yang dipilih")
             Exit Sub
         Else
             If MessageBox.Show(" Are you sure to delete this data?", "Konfirmasi", MessageBoxButtons.YesNoCancel) Then
                 Call koneksiDB()
-                CMD = New OleDb.OleDbCommand(" delete from Pesan where kode_pesanan = '" & kode_pemesanan.Text & "'", Conn)
+                CMD = New OleDb.OleDbCommand(" delete from Pesan where kode_Pesanan = '" & kode_pemesanan.Text & "'", Conn)
                 DM = CMD.ExecuteReader
                 MsgBox("Hapus Data Berhasil")
                 Call MatikanForm()
