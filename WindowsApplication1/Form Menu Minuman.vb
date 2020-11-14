@@ -83,7 +83,7 @@
         Else
             Call koneksiDB()
             CMD = New OleDb.OleDbCommand("update Menu_Minuman set Jenis_Minuman = '" &
-           txt_jenis_minuman.Text & "', Harga_Minuman = '" & txt_harga_minuman.Text & "'", Conn)
+           txt_jenis_minuman.Text & "', Harga_Minuman = '" & txt_harga_minuman.Text & "'  where ID_Minuman ='" & txt_id_minuman.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
         End If
