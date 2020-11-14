@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Menu
+Partial Class Data_Menu_Makanan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,13 +22,13 @@ Partial Class Menu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Grupbox1 = New System.Windows.Forms.GroupBox()
         Me.txtHargamakan = New System.Windows.Forms.TextBox()
         Me.txtJenismakan = New System.Windows.Forms.TextBox()
         Me.txtIdMakanan = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblwelcome = New System.Windows.Forms.Label()
         Me.btnInput = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnedit = New System.Windows.Forms.Button()
@@ -38,25 +38,26 @@ Partial Class Menu
         Me.DGV = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btn_Minuman = New System.Windows.Forms.Button()
-        Me.GroupBox1.SuspendLayout()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.Grupbox1.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'GroupBox1
+        'Grupbox1
         '
-        Me.GroupBox1.Controls.Add(Me.txtHargamakan)
-        Me.GroupBox1.Controls.Add(Me.txtJenismakan)
-        Me.GroupBox1.Controls.Add(Me.txtIdMakanan)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(321, 194)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Input_Menu_Makanan"
+        Me.Grupbox1.Controls.Add(Me.txtHargamakan)
+        Me.Grupbox1.Controls.Add(Me.txtJenismakan)
+        Me.Grupbox1.Controls.Add(Me.txtIdMakanan)
+        Me.Grupbox1.Controls.Add(Me.Label5)
+        Me.Grupbox1.Controls.Add(Me.Label2)
+        Me.Grupbox1.Controls.Add(Me.lblwelcome)
+        Me.Grupbox1.Location = New System.Drawing.Point(12, 12)
+        Me.Grupbox1.Name = "Grupbox1"
+        Me.Grupbox1.Size = New System.Drawing.Size(321, 194)
+        Me.Grupbox1.TabIndex = 0
+        Me.Grupbox1.TabStop = False
+        Me.Grupbox1.Text = "Input_Menu_Makanan"
         '
         'txtHargamakan
         '
@@ -97,14 +98,14 @@ Partial Class Menu
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Jenis_Makanan"
         '
-        'Label1
+        'lblwelcome
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 35)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(69, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID_Makanan"
+        Me.lblwelcome.AutoSize = True
+        Me.lblwelcome.Location = New System.Drawing.Point(16, 35)
+        Me.lblwelcome.Name = "lblwelcome"
+        Me.lblwelcome.Size = New System.Drawing.Size(69, 13)
+        Me.lblwelcome.TabIndex = 0
+        Me.lblwelcome.Text = "ID_Makanan"
         '
         'btnInput
         '
@@ -176,7 +177,7 @@ Partial Class Menu
         Me.GroupBox2.Size = New System.Drawing.Size(477, 282)
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Detail_Menu_Makananan"
+        Me.GroupBox2.Text = "Detail_Menu_Makanan"
         '
         'btn_Minuman
         '
@@ -187,11 +188,21 @@ Partial Class Menu
         Me.btn_Minuman.Text = "Form Menu Minuman "
         Me.btn_Minuman.UseVisualStyleBackColor = True
         '
-        'Menu
+        'btnLogin
+        '
+        Me.btnLogin.Location = New System.Drawing.Point(422, 320)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(98, 38)
+        Me.btnLogin.TabIndex = 13
+        Me.btnLogin.Text = "Login"
+        Me.btnLogin.UseVisualStyleBackColor = True
+        '
+        'Data_Menu_Makanan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(860, 370)
+        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.btn_Minuman)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnExit)
@@ -200,21 +211,21 @@ Partial Class Menu
         Me.Controls.Add(Me.btnedit)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnInput)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Menu"
+        Me.Controls.Add(Me.Grupbox1)
+        Me.Name = "Data_Menu_Makanan"
         Me.Text = "Data Menu Makanan"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.Grupbox1.ResumeLayout(False)
+        Me.Grupbox1.PerformLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Grupbox1 As System.Windows.Forms.GroupBox
     Friend WithEvents txtIdMakanan As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblwelcome As System.Windows.Forms.Label
     Friend WithEvents btnInput As System.Windows.Forms.Button
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents btnedit As System.Windows.Forms.Button
@@ -226,4 +237,5 @@ Partial Class Menu
     Friend WithEvents txtHargamakan As TextBox
     Friend WithEvents txtJenismakan As TextBox
     Friend WithEvents btn_Minuman As Button
+    Friend WithEvents btnLogin As Button
 End Class

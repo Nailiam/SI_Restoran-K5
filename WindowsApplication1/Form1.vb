@@ -1,4 +1,4 @@
-﻿Public Class Menu
+﻿Public Class Data_Menu_Makanan
 
     Private Property ID_Makanan As Object
 
@@ -132,5 +132,9 @@
 
     Private Sub btn_Minuman_Click(sender As Object, e As EventArgs) Handles btn_Minuman.Click
         Menu_Minuman.Show()
+    End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        Login.Show()
     End Sub
 End Class

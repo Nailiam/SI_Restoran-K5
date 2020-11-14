@@ -22,14 +22,14 @@ Partial Class Kasir
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Input_Data_Kasir = New System.Windows.Forms.GroupBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_nama = New System.Windows.Forms.TextBox()
         Me.txt_id = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblselamat = New System.Windows.Forms.Label()
         Me.btn_exit = New System.Windows.Forms.Button()
         Me.btn_cancel = New System.Windows.Forms.Button()
         Me.btn_delete = New System.Windows.Forms.Button()
@@ -38,26 +38,26 @@ Partial Class Kasir
         Me.btn_input = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.GroupBox1.SuspendLayout()
+        Me.Input_Data_Kasir.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'GroupBox1
+        'Input_Data_Kasir
         '
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.txt_nama)
-        Me.GroupBox1.Controls.Add(Me.txt_id)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(22, 23)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(283, 133)
-        Me.GroupBox1.TabIndex = 1
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Input Data Kasir"
+        Me.Input_Data_Kasir.Controls.Add(Me.ComboBox1)
+        Me.Input_Data_Kasir.Controls.Add(Me.Label4)
+        Me.Input_Data_Kasir.Controls.Add(Me.txt_nama)
+        Me.Input_Data_Kasir.Controls.Add(Me.txt_id)
+        Me.Input_Data_Kasir.Controls.Add(Me.Label3)
+        Me.Input_Data_Kasir.Controls.Add(Me.Label2)
+        Me.Input_Data_Kasir.Controls.Add(Me.lblselamat)
+        Me.Input_Data_Kasir.Location = New System.Drawing.Point(22, 23)
+        Me.Input_Data_Kasir.Name = "Input_Data_Kasir"
+        Me.Input_Data_Kasir.Size = New System.Drawing.Size(283, 133)
+        Me.Input_Data_Kasir.TabIndex = 1
+        Me.Input_Data_Kasir.TabStop = False
+        Me.Input_Data_Kasir.Text = "Input Data Kasir"
         '
         'ComboBox1
         '
@@ -107,14 +107,14 @@ Partial Class Kasir
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Nama Kasir :"
         '
-        'Label1
+        'lblselamat
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 27)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID Kasir :"
+        Me.lblselamat.AutoSize = True
+        Me.lblselamat.Location = New System.Drawing.Point(6, 27)
+        Me.lblselamat.Name = "lblselamat"
+        Me.lblselamat.Size = New System.Drawing.Size(50, 13)
+        Me.lblselamat.TabIndex = 0
+        Me.lblselamat.Text = "ID Kasir :"
         '
         'btn_exit
         '
@@ -200,23 +200,23 @@ Partial Class Kasir
         Me.Controls.Add(Me.btn_edit)
         Me.Controls.Add(Me.btn_save)
         Me.Controls.Add(Me.btn_input)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Input_Data_Kasir)
         Me.Name = "Kasir"
         Me.Text = "Kasir"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.Input_Data_Kasir.ResumeLayout(False)
+        Me.Input_Data_Kasir.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Input_Data_Kasir As GroupBox
     Friend WithEvents txt_nama As TextBox
     Friend WithEvents txt_id As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblselamat As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents btn_exit As Button

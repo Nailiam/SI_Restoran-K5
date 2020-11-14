@@ -22,8 +22,90 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtUN = New System.Windows.Forms.TextBox()
+        Me.txtPass = New System.Windows.Forms.TextBox()
+        Me.btn_Login = New System.Windows.Forms.Button()
+        Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(97, 33)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(93, 29)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Login "
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(25, 93)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(78, 18)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "User Name"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(25, 143)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(68, 18)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Password"
+        '
+        'txtUN
+        '
+        Me.txtUN.Location = New System.Drawing.Point(159, 94)
+        Me.txtUN.Name = "txtUN"
+        Me.txtUN.Size = New System.Drawing.Size(153, 20)
+        Me.txtUN.TabIndex = 3
+        '
+        'txtPass
+        '
+        Me.txtPass.Location = New System.Drawing.Point(159, 143)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.Size = New System.Drawing.Size(153, 20)
+        Me.txtPass.TabIndex = 4
+        Me.txtPass.UseSystemPasswordChar = True
+        '
+        'btn_Login
+        '
+        Me.btn_Login.Location = New System.Drawing.Point(228, 245)
+        Me.btn_Login.Name = "btn_Login"
+        Me.btn_Login.Size = New System.Drawing.Size(84, 23)
+        Me.btn_Login.TabIndex = 5
+        Me.btn_Login.Text = "Login "
+        Me.btn_Login.UseVisualStyleBackColor = True
+        '
+        'Login
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(358, 316)
+        Me.Controls.Add(Me.btn_Login)
+        Me.Controls.Add(Me.txtPass)
+        Me.Controls.Add(Me.txtUN)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Name = "Login"
         Me.Text = "Login"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
+
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtUN As TextBox
+    Friend WithEvents txtPass As TextBox
+    Friend WithEvents btn_Login As Button
 End Class
