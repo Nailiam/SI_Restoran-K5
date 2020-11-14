@@ -51,7 +51,7 @@
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If txtIdMakanan.Text = "" Or txtJenismakan.Text = "" Or txtHargamakan.Text = "" Then
-            MsgBox("Data Buku Belum Lengkap")
+            MsgBox("Data Menu Makanan Belum Lengkap")
             Exit Sub
 
         Else
@@ -89,7 +89,7 @@
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
         If txtIdMakanan.Text = "" Or txtJenismakan.Text = "" Or txtHargamakan.Text = "" Then
-            MsgBox("Data Menu Belum Lengkap")
+            MsgBox("Data Menu Makanan Belum Lengkap")
             Exit Sub
 
         Else
