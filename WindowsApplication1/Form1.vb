@@ -1,28 +1,22 @@
 ﻿Public Class Menu
 
-    Private Property Id_Menu As Object
+    Private Property ID_Makanan As Object
 
     Sub KosongkanForm()
-        txtIdMenu.Text = ""
+        txtIdMakanan.Text = ""
         txtJenismakan.Text = ""
         txtHargamakan.Text = ""
-        txtJenisminum.Text = ""
-        txtHargaMinum.Text = ""
-        txtIdMenu.Focus()
+        txtIdMakanan.Focus()
     End Sub
     Sub MatikanForm()
-        txtIdMenu.Enabled = False
+        txtIdMakanan.Enabled = False
         txtJenismakan.Enabled = False
         txtHargamakan.Enabled = False
-        txtJenisminum.Enabled = False
-        txtHargaMinum.Enabled = False
     End Sub
     Sub HidupkanForm()
-        txtIdMenu.Enabled = True
+        txtIdMakanan.Enabled = True
         txtJenismakan.Enabled = True
         txtHargamakan.Enabled = True
-        txtJenisminum.Enabled = True
-        txtHargaMinum.Enabled = True
     End Sub
     Sub TampilkanData()
         Call koneksiDB()
@@ -56,22 +50,21 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If txtIdMenu.Text = "" Or txtJenismakan.Text = "" Or txtHargamakan.Text = "" Or txtJenisminum.Text = "" Or txtHargaMinum.Text = "" Then
+        If txtIdMakanan.Text = "" Or txtJenismakan.Text = "" Or txtHargamakan.Text = "" Then
             MsgBox("Data Buku Belum Lengkap")
             Exit Sub
 
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand(" select * from Menu where Id_Menu='" & txtIdMenu.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand(" select * from Menu where ID_Makanan='" & txtIdMakanan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             DM.Read()
 
             If Not DM.HasRows Then
                 Call koneksiDB()
                 Dim simpan As String
-                simpan = "insert into Menu values ('" & txtIdMenu.Text &
-               "', '" & txtJenismakan.Text & "', '" & txtHargamakan.Text & "','" &
-               txtJenisminum.Text & "','" & txtHargaMinum.Text & "')"
+                simpan = "insert into Menu values ('" & txtIdMakanan.Text &
+               "', '" & txtJenismakan.Text & "', '" & txtHargamakan.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
                 MsgBox("Input Data Sukses")
@@ -86,26 +79,23 @@
 
     Private Sub DGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellContentClick
         On Error Resume Next
-        txtIdMenu.Text = DGV.Rows(e.RowIndex).Cells(0).Value
+        txtIdMakanan.Text = DGV.Rows(e.RowIndex).Cells(0).Value
         txtJenismakan.Text = DGV.Rows(e.RowIndex).Cells(1).Value
         txtHargamakan.Text = DGV.Rows(e.RowIndex).Cells(2).Value
-        txtJenisminum.Text = DGV.Rows(e.RowIndex).Cells(3).Value
-        txtHargaMinum.Text = DGV.Rows(e.RowIndex).Cells(4).Value
 
         Call HidupkanForm()
-        txtIdMenu.Enabled = False
+        txtIdMakanan.Enabled = False
     End Sub
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
-        If txtIdMenu.Text = "" Or txtJenismakan.Text = "" Or txtHargamakan.Text = "" Or txtJenisminum.Text = "" Or txtHargaMinum.Text = "" Then
+        If txtIdMakanan.Text = "" Or txtJenismakan.Text = "" Or txtHargamakan.Text = "" Then
             MsgBox("Data Menu Belum Lengkap")
             Exit Sub
 
         Else
             Call koneksiDB()
             CMD = New OleDb.OleDbCommand(" update Menu set Jenis_Makanan = '" &
-           txtJenismakan.Text & "', Jenis_Minuman = '" & txtHargamakan.Text & "', Harga_Minuman ='" & txtJenisminum.Text & "', Harga Makanan = '" &
-           txtHargaMinum.Text & "'  where Id_Menu ='" & txtIdMenu.Text & "'", Conn)
+           txtJenismakan.Text & "', Jenis_Minuman = '" & txtHargamakan.Text & "'  where ID_Makanan ='" & txtIdMakanan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
 
@@ -117,7 +107,7 @@
     End Sub
 
     Private Sub btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
-        If txtIdMenu.Text = "" Then
+        If txtIdMakanan.Text = "" Then
             MsgBox("Tidak ada data yang dipilih")
             Exit Sub
 
@@ -127,7 +117,7 @@
 
 
                 Call koneksiDB()
-                CMD = New OleDb.OleDbCommand(" delete from Menu where Id_Menu ='" & txtIdMenu.Text & "'", Conn)
+                CMD = New OleDb.OleDbCommand(" delete from Menu where ID_Makanan ='" & txtIdMakanan.Text & "'", Conn)
                 DM = CMD.ExecuteReader
                 MsgBox("Hapus Data Berhasil")
                 Call MatikanForm()

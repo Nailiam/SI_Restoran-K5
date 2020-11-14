@@ -25,12 +25,8 @@ Partial Class Menu
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtHargamakan = New System.Windows.Forms.TextBox()
         Me.txtJenismakan = New System.Windows.Forms.TextBox()
-        Me.txtHargaMinum = New System.Windows.Forms.TextBox()
-        Me.txtJenisminum = New System.Windows.Forms.TextBox()
-        Me.txtIdMenu = New System.Windows.Forms.TextBox()
+        Me.txtIdMakanan = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnInput = New System.Windows.Forms.Button()
@@ -51,12 +47,8 @@ Partial Class Menu
         '
         Me.GroupBox1.Controls.Add(Me.txtHargamakan)
         Me.GroupBox1.Controls.Add(Me.txtJenismakan)
-        Me.GroupBox1.Controls.Add(Me.txtHargaMinum)
-        Me.GroupBox1.Controls.Add(Me.txtJenisminum)
-        Me.GroupBox1.Controls.Add(Me.txtIdMenu)
+        Me.GroupBox1.Controls.Add(Me.txtIdMakanan)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
@@ -64,7 +56,7 @@ Partial Class Menu
         Me.GroupBox1.Size = New System.Drawing.Size(321, 194)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Input_Menu"
+        Me.GroupBox1.Text = "Input_Menu_Makanan"
         '
         'txtHargamakan
         '
@@ -80,26 +72,12 @@ Partial Class Menu
         Me.txtJenismakan.Size = New System.Drawing.Size(121, 20)
         Me.txtJenismakan.TabIndex = 8
         '
-        'txtHargaMinum
+        'txtIdMakanan
         '
-        Me.txtHargaMinum.Location = New System.Drawing.Point(125, 152)
-        Me.txtHargaMinum.Name = "txtHargaMinum"
-        Me.txtHargaMinum.Size = New System.Drawing.Size(121, 20)
-        Me.txtHargaMinum.TabIndex = 7
-        '
-        'txtJenisminum
-        '
-        Me.txtJenisminum.Location = New System.Drawing.Point(125, 117)
-        Me.txtJenisminum.Name = "txtJenisminum"
-        Me.txtJenisminum.Size = New System.Drawing.Size(121, 20)
-        Me.txtJenisminum.TabIndex = 6
-        '
-        'txtIdMenu
-        '
-        Me.txtIdMenu.Location = New System.Drawing.Point(125, 28)
-        Me.txtIdMenu.Name = "txtIdMenu"
-        Me.txtIdMenu.Size = New System.Drawing.Size(121, 20)
-        Me.txtIdMenu.TabIndex = 5
+        Me.txtIdMakanan.Location = New System.Drawing.Point(125, 28)
+        Me.txtIdMakanan.Name = "txtIdMakanan"
+        Me.txtIdMakanan.Size = New System.Drawing.Size(121, 20)
+        Me.txtIdMakanan.TabIndex = 5
         '
         'Label5
         '
@@ -109,24 +87,6 @@ Partial Class Menu
         Me.Label5.Size = New System.Drawing.Size(87, 13)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Harga_Makanan"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(20, 152)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Harga_Minuman"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(20, 124)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Jenis_Minuman"
         '
         'Label2
         '
@@ -142,9 +102,9 @@ Partial Class Menu
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(16, 35)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(49, 13)
+        Me.Label1.Size = New System.Drawing.Size(69, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Id_Menu"
+        Me.Label1.Text = "ID_Makanan"
         '
         'btnInput
         '
@@ -216,7 +176,7 @@ Partial Class Menu
         Me.GroupBox2.Size = New System.Drawing.Size(477, 282)
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Detail_Menu"
+        Me.GroupBox2.Text = "Detail_Menu_Makananan"
         '
         'btn_Pelanggan
         '
@@ -242,7 +202,7 @@ Partial Class Menu
         Me.Controls.Add(Me.btnInput)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Menu"
-        Me.Text = "Data Menu"
+        Me.Text = "Data Menu Makanan"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).EndInit()
@@ -251,12 +211,8 @@ Partial Class Menu
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtHargaMinum As System.Windows.Forms.TextBox
-    Friend WithEvents txtJenisminum As System.Windows.Forms.TextBox
-    Friend WithEvents txtIdMenu As System.Windows.Forms.TextBox
+    Friend WithEvents txtIdMakanan As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnInput As System.Windows.Forms.Button
