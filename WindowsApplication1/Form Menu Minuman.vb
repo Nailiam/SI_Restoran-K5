@@ -43,7 +43,7 @@
 
     Private Sub btn_save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_save.Click
         If txt_id_minuman.Text = "" Or txt_jenis_minuman.Text = "" Or txt_harga_minuman.Text = "" Then
-            MsgBox("Data Pramusaji Belum Lengkap")
+            MsgBox("Data Menu Minuman Belum Lengkap")
             Exit Sub
         Else
             Call koneksiDB()
@@ -78,7 +78,7 @@
 
     Private Sub btn_edit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_edit.Click
         If txt_id_minuman.Text = "" Or txt_jenis_minuman.Text = "" Or txt_harga_minuman.Text = "" Then
-            MsgBox("Data Pramusaji Belum Lengkap")
+            MsgBox("Data Menu Minuman Belum Lengkap")
             Exit Sub
         Else
             Call koneksiDB()
@@ -99,7 +99,7 @@
         Else
             If MessageBox.Show(" Are you sure to delete this data?", "Konfirmasi", MessageBoxButtons.YesNoCancel) Then
                 Call koneksiDB()
-                CMD = New OleDb.OleDbCommand(" delete from pramusaji where ID_Pramusaji = '" & txt_id_minuman.Text & "'", Conn)
+                CMD = New OleDb.OleDbCommand(" delete from Menu Minuman where ID_Minuman = '" & txt_id_minuman.Text & "'", Conn)
                 DM = CMD.ExecuteReader
                 MsgBox("Hapus Data Berhasil")
                 Call MatikanForm()
