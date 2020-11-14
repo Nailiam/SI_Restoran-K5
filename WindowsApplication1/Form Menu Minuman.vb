@@ -16,7 +16,7 @@
     End Sub
     Sub TampilkanData()
         Call koneksiDB()
-        DA = New OleDb.OleDbDataAdapter("select * from Menu Minuman", Conn)
+        DA = New OleDb.OleDbDataAdapter("select * from Menu_Minuman", Conn)
         DS = New DataSet
         DA.Fill(DS)
         DataGridView1.DataSource = DS.Tables(0)
@@ -43,17 +43,17 @@
 
     Private Sub btn_save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_save.Click
         If txt_id_minuman.Text = "" Or txt_jenis_minuman.Text = "" Or txt_harga_minuman.Text = "" Then
-            MsgBox("Data Menu Minuman Belum Lengkap")
+            MsgBox("Data Menu_Minuman Belum Lengkap")
             Exit Sub
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand(" select * from Menu Minuman where Id_minuman='" & txt_id_minuman.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand(" select * from Menu_Minuman where Id_minuman='" & txt_id_minuman.Text & "'", Conn)
             DM = CMD.ExecuteReader
             DM.Read()
             If Not DM.HasRows Then
                 Call koneksiDB()
                 Dim simpan As String
-                simpan = "insert into Menu Minuman values ('" & txt_id_minuman.Text &
+                simpan = "insert into Menu_Minuman values ('" & txt_id_minuman.Text &
                "', '" & txt_jenis_minuman.Text & "', '" & txt_harga_minuman.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
@@ -78,11 +78,11 @@
 
     Private Sub btn_edit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_edit.Click
         If txt_id_minuman.Text = "" Or txt_jenis_minuman.Text = "" Or txt_harga_minuman.Text = "" Then
-            MsgBox("Data Menu Minuman Belum Lengkap")
+            MsgBox("Data Menu_Minuman Belum Lengkap")
             Exit Sub
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand("update menu minuman set Jenis_Minuman = '" &
+            CMD = New OleDb.OleDbCommand("update Menu_Minuman set Jenis_Minuman = '" &
            txt_jenis_minuman.Text & "', Harga_Minuman = '" & txt_harga_minuman.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
@@ -99,7 +99,7 @@
         Else
             If MessageBox.Show(" Are you sure to delete this data?", "Konfirmasi", MessageBoxButtons.YesNoCancel) Then
                 Call koneksiDB()
-                CMD = New OleDb.OleDbCommand(" delete from Menu Minuman where ID_Minuman = '" & txt_id_minuman.Text & "'", Conn)
+                CMD = New OleDb.OleDbCommand(" delete from Menu_Minuman where ID_Minuman = '" & txt_id_minuman.Text & "'", Conn)
                 DM = CMD.ExecuteReader
                 MsgBox("Hapus Data Berhasil")
                 Call MatikanForm()
@@ -112,4 +112,7 @@
         End If
     End Sub
 
+    Private Sub txt_next_Click(sender As Object, e As EventArgs) Handles txt_next.Click
+        Pelanggan.Show()
+    End Sub
 End Class

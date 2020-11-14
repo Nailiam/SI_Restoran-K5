@@ -37,6 +37,7 @@ Partial Class Menu_Minuman
         Me.btn_input = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txt_next = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -177,11 +178,21 @@ Partial Class Menu_Minuman
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detail Data Menu Minuman"
         '
+        'txt_next
+        '
+        Me.txt_next.Location = New System.Drawing.Point(489, 285)
+        Me.txt_next.Name = "txt_next"
+        Me.txt_next.Size = New System.Drawing.Size(113, 29)
+        Me.txt_next.TabIndex = 32
+        Me.txt_next.Text = "Next Pelanggan"
+        Me.txt_next.UseVisualStyleBackColor = True
+        '
         'Menu_Minuman
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(631, 290)
+        Me.ClientSize = New System.Drawing.Size(631, 331)
+        Me.Controls.Add(Me.txt_next)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_cancel)
@@ -215,4 +226,5 @@ Partial Class Menu_Minuman
     Friend WithEvents btn_input As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents txt_next As Button
 End Class
