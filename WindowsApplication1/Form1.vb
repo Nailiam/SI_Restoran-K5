@@ -95,7 +95,11 @@
         Else
             Call koneksiDB()
             CMD = New OleDb.OleDbCommand(" update Menu_Makanan set Jenis_Makanan = '" &
+<<<<<<< Updated upstream
            txtJenismakan.Text & "', Harga_Makanan = '" & txtHargamakan.Text & "'  where ID_Makanan ='" & txtIdMakanan.Text & "'", Conn)
+=======
+           txtJenismakan.Text & "', Jenis_Minuman = '" & txtHargamakan.Text & "'  where ID_Makanan ='" & txtIdMakanan.Text & "'", Conn)
+>>>>>>> Stashed changes
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
 
