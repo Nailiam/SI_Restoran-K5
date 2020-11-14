@@ -130,7 +130,7 @@
         End If
     End Sub
 
-    Private Sub btn_Pelanggan_Click(sender As Object, e As EventArgs) Handles btn_Pelanggan.Click
-        Pelanggan.Show()
+    Private Sub btn_Minuman_Click(sender As Object, e As EventArgs) Handles btn_Minuman.Click
+        Menu_Minuman.Show()
     End Sub
 End Class

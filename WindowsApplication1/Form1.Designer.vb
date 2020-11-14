@@ -37,7 +37,7 @@ Partial Class Menu
         Me.btnExit = New System.Windows.Forms.Button()
         Me.DGV = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.btn_Pelanggan = New System.Windows.Forms.Button()
+        Me.btn_Minuman = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -178,21 +178,21 @@ Partial Class Menu
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detail_Menu_Makananan"
         '
-        'btn_Pelanggan
+        'btn_Minuman
         '
-        Me.btn_Pelanggan.Location = New System.Drawing.Point(695, 320)
-        Me.btn_Pelanggan.Name = "btn_Pelanggan"
-        Me.btn_Pelanggan.Size = New System.Drawing.Size(141, 38)
-        Me.btn_Pelanggan.TabIndex = 12
-        Me.btn_Pelanggan.Text = "Form Pelanggan"
-        Me.btn_Pelanggan.UseVisualStyleBackColor = True
+        Me.btn_Minuman.Location = New System.Drawing.Point(695, 320)
+        Me.btn_Minuman.Name = "btn_Minuman"
+        Me.btn_Minuman.Size = New System.Drawing.Size(141, 38)
+        Me.btn_Minuman.TabIndex = 12
+        Me.btn_Minuman.Text = "Form Menu Minuman "
+        Me.btn_Minuman.UseVisualStyleBackColor = True
         '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(860, 370)
-        Me.Controls.Add(Me.btn_Pelanggan)
+        Me.Controls.Add(Me.btn_Minuman)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnCancel)
@@ -225,5 +225,5 @@ Partial Class Menu
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents txtHargamakan As TextBox
     Friend WithEvents txtJenismakan As TextBox
-    Friend WithEvents btn_Pelanggan As Button
+    Friend WithEvents btn_Minuman As Button
 End Class
