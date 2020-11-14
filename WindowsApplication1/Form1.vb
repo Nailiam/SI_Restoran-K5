@@ -20,7 +20,7 @@
     End Sub
     Sub TampilkanData()
         Call koneksiDB()
-        DA = New OleDb.OleDbDataAdapter("select  * From Menu ", Conn)
+        DA = New OleDb.OleDbDataAdapter("select  * From Menu_Makanan ", Conn)
         DS = New DataSet
         DA.Fill(DS)
         DGV.DataSource = DS.Tables(0)
@@ -56,14 +56,14 @@
 
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand(" select * from Menu where ID_Makanan='" & txtIdMakanan.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand(" select * from Menu_Makanan where ID_Makanan='" & txtIdMakanan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             DM.Read()
 
             If Not DM.HasRows Then
                 Call koneksiDB()
                 Dim simpan As String
-                simpan = "insert into Menu values ('" & txtIdMakanan.Text &
+                simpan = "insert into Menu_Makanan values ('" & txtIdMakanan.Text &
                "', '" & txtJenismakan.Text & "', '" & txtHargamakan.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
@@ -94,8 +94,8 @@
 
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand(" update Menu set Jenis_Makanan = '" &
-           txtJenismakan.Text & "', Jenis_Minuman = '" & txtHargamakan.Text & "'  where ID_Makanan ='" & txtIdMakanan.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand(" update Menu_Makanan set Jenis_Makanan = '" &
+           txtJenismakan.Text & "', Harga_Makanan = '" & txtHargamakan.Text & "'  where ID_Makanan ='" & txtIdMakanan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
 
@@ -117,7 +117,7 @@
 
 
                 Call koneksiDB()
-                CMD = New OleDb.OleDbCommand(" delete from Menu where ID_Makanan ='" & txtIdMakanan.Text & "'", Conn)
+                CMD = New OleDb.OleDbCommand(" delete from Menu_Makanan where ID_Makanan ='" & txtIdMakanan.Text & "'", Conn)
                 DM = CMD.ExecuteReader
                 MsgBox("Hapus Data Berhasil")
                 Call MatikanForm()
