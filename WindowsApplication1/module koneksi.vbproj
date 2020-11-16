@@ -76,6 +76,12 @@
     <Compile Include="Bayar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Data Karyawan.Designer.vb">
+      <DependentUpon>Data Karyawan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data Karyawan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form Menu Minuman.Designer.vb">
       <DependentUpon>Form Menu Minuman.vb</DependentUpon>
     </Compile>
@@ -133,6 +139,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Bayar.resx">
       <DependentUpon>Bayar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data Karyawan.resx">
+      <DependentUpon>Data Karyawan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Menu Minuman.resx">
       <DependentUpon>Form Menu Minuman.vb</DependentUpon>
