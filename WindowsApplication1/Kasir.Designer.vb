@@ -23,6 +23,17 @@ Partial Class Kasir
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Input_Data_Kasir = New System.Windows.Forms.GroupBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_nama = New System.Windows.Forms.TextBox()
@@ -38,6 +49,7 @@ Partial Class Kasir
         Me.btn_input = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Input_Data_Kasir.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,6 +57,18 @@ Partial Class Kasir
         '
         'Input_Data_Kasir
         '
+        Me.Input_Data_Kasir.Controls.Add(Me.RichTextBox1)
+        Me.Input_Data_Kasir.Controls.Add(Me.ComboBox2)
+        Me.Input_Data_Kasir.Controls.Add(Me.DateTimePicker1)
+        Me.Input_Data_Kasir.Controls.Add(Me.Label9)
+        Me.Input_Data_Kasir.Controls.Add(Me.Label8)
+        Me.Input_Data_Kasir.Controls.Add(Me.Label7)
+        Me.Input_Data_Kasir.Controls.Add(Me.Label6)
+        Me.Input_Data_Kasir.Controls.Add(Me.Label5)
+        Me.Input_Data_Kasir.Controls.Add(Me.Label1)
+        Me.Input_Data_Kasir.Controls.Add(Me.TextBox3)
+        Me.Input_Data_Kasir.Controls.Add(Me.TextBox2)
+        Me.Input_Data_Kasir.Controls.Add(Me.TextBox1)
         Me.Input_Data_Kasir.Controls.Add(Me.ComboBox1)
         Me.Input_Data_Kasir.Controls.Add(Me.Label4)
         Me.Input_Data_Kasir.Controls.Add(Me.txt_nama)
@@ -54,15 +78,105 @@ Partial Class Kasir
         Me.Input_Data_Kasir.Controls.Add(Me.lblselamat)
         Me.Input_Data_Kasir.Location = New System.Drawing.Point(22, 23)
         Me.Input_Data_Kasir.Name = "Input_Data_Kasir"
-        Me.Input_Data_Kasir.Size = New System.Drawing.Size(283, 133)
+        Me.Input_Data_Kasir.Size = New System.Drawing.Size(308, 411)
         Me.Input_Data_Kasir.TabIndex = 1
         Me.Input_Data_Kasir.TabStop = False
         Me.Input_Data_Kasir.Text = "Input Data Kasir"
         '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(147, 372)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(98, 21)
+        Me.ComboBox2.TabIndex = 21
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(147, 169)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(102, 20)
+        Me.DateTimePicker1.TabIndex = 20
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 376)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(46, 13)
+        Me.Label9.TabIndex = 19
+        Me.Label9.Text = "Status : "
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(6, 283)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(45, 13)
+        Me.Label8.TabIndex = 18
+        Me.Label8.Text = "Alamat :"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 247)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(69, 13)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "No Telepon :"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(6, 212)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(46, 13)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Agama :"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(6, 175)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(78, 13)
+        Me.Label5.TabIndex = 15
+        Me.Label5.Text = "Tanggal Lahir :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 139)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 13)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "Tempat Lahir :"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(147, 244)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 10
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(147, 208)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 9
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(147, 136)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 8
+        '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(147, 88)
+        Me.ComboBox1.Location = New System.Drawing.Point(147, 99)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(98, 21)
         Me.ComboBox1.TabIndex = 7
@@ -70,7 +184,7 @@ Partial Class Kasir
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 91)
+        Me.Label4.Location = New System.Drawing.Point(6, 102)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(77, 13)
         Me.Label4.TabIndex = 6
@@ -78,7 +192,7 @@ Partial Class Kasir
         '
         'txt_nama
         '
-        Me.txt_nama.Location = New System.Drawing.Point(147, 57)
+        Me.txt_nama.Location = New System.Drawing.Point(147, 63)
         Me.txt_nama.Name = "txt_nama"
         Me.txt_nama.Size = New System.Drawing.Size(100, 20)
         Me.txt_nama.TabIndex = 4
@@ -101,7 +215,7 @@ Partial Class Kasir
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 60)
+        Me.Label2.Location = New System.Drawing.Point(6, 66)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(67, 13)
         Me.Label2.TabIndex = 1
@@ -110,7 +224,7 @@ Partial Class Kasir
         'lblselamat
         '
         Me.lblselamat.AutoSize = True
-        Me.lblselamat.Location = New System.Drawing.Point(6, 27)
+        Me.lblselamat.Location = New System.Drawing.Point(6, 30)
         Me.lblselamat.Name = "lblselamat"
         Me.lblselamat.Size = New System.Drawing.Size(50, 13)
         Me.lblselamat.TabIndex = 0
@@ -118,7 +232,7 @@ Partial Class Kasir
         '
         'btn_exit
         '
-        Me.btn_exit.Location = New System.Drawing.Point(191, 236)
+        Me.btn_exit.Location = New System.Drawing.Point(588, 353)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(77, 28)
         Me.btn_exit.TabIndex = 23
@@ -127,7 +241,7 @@ Partial Class Kasir
         '
         'btn_cancel
         '
-        Me.btn_cancel.Location = New System.Drawing.Point(112, 236)
+        Me.btn_cancel.Location = New System.Drawing.Point(509, 353)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(77, 28)
         Me.btn_cancel.TabIndex = 22
@@ -136,7 +250,7 @@ Partial Class Kasir
         '
         'btn_delete
         '
-        Me.btn_delete.Location = New System.Drawing.Point(31, 236)
+        Me.btn_delete.Location = New System.Drawing.Point(428, 353)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(77, 28)
         Me.btn_delete.TabIndex = 21
@@ -145,7 +259,7 @@ Partial Class Kasir
         '
         'btn_edit
         '
-        Me.btn_edit.Location = New System.Drawing.Point(191, 189)
+        Me.btn_edit.Location = New System.Drawing.Point(588, 306)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(77, 28)
         Me.btn_edit.TabIndex = 20
@@ -154,7 +268,7 @@ Partial Class Kasir
         '
         'btn_save
         '
-        Me.btn_save.Location = New System.Drawing.Point(112, 189)
+        Me.btn_save.Location = New System.Drawing.Point(509, 306)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(77, 28)
         Me.btn_save.TabIndex = 19
@@ -163,7 +277,7 @@ Partial Class Kasir
         '
         'btn_input
         '
-        Me.btn_input.Location = New System.Drawing.Point(31, 189)
+        Me.btn_input.Location = New System.Drawing.Point(428, 306)
         Me.btn_input.Name = "btn_input"
         Me.btn_input.Size = New System.Drawing.Size(77, 28)
         Me.btn_input.TabIndex = 18
@@ -173,12 +287,12 @@ Partial Class Kasir
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
-        Me.GroupBox2.Location = New System.Drawing.Point(335, 23)
+        Me.GroupBox2.Location = New System.Drawing.Point(348, 23)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(380, 241)
         Me.GroupBox2.TabIndex = 24
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Detail Data Pramusaji"
+        Me.GroupBox2.Text = "Detail Data Kasir"
         '
         'DataGridView1
         '
@@ -188,11 +302,19 @@ Partial Class Kasir
         Me.DataGridView1.Size = New System.Drawing.Size(345, 199)
         Me.DataGridView1.TabIndex = 19
         '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(147, 283)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(140, 69)
+        Me.RichTextBox1.TabIndex = 22
+        Me.RichTextBox1.Text = ""
+        '
         'Kasir
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(731, 313)
+        Me.ClientSize = New System.Drawing.Size(756, 469)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_cancel)
@@ -227,4 +349,16 @@ Partial Class Kasir
     Friend WithEvents btn_input As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class
