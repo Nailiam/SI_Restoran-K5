@@ -1,4 +1,6 @@
-﻿Public Class Data_Karyawan
+﻿Imports System.Diagnostics.Eventing.Reader
+
+Public Class Data_Karyawan
     Sub KosongkanForm()
         txt_id_karyawan.Text = ""
         txt_nama_karyawan.Text = ""
@@ -40,5 +42,33 @@
     End Sub
     Sub Foto1()
         PictureBox1.ImageLocation = ""
+    End Sub
+
+    Private Sub btn_simpan_Click(sender As Object, e As EventArgs) Handles btn_simpan.Click
+        If txt_id_karyawan.Text = "" Or txt_nama_karyawan.Text = "" Or txt_lahir.Text = "" Or cmb_jk.Text = "" Or
+    txt_hp.Text = "" Or txt_alamat.Text = "" Or cmb_agama.Text = "" Or cmb_status.Text = "" Or txt_foto.Text = "" Then
+            MsgBox("Data Karyawan Belum Lengkap")
+            Exit Sub
+        Else
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand(" select * from Karyawan where id_karyawan ='" & txt_id_karyawan.Text & "'", Conn)
+            DM = CMD.ExecuteReader
+        DM.Read()
+        If Not DM.HasRows Then
+            Call koneksiDB()
+            Dim simpan As String
+                simpan = "insert into Karyawan values ('" &
+           txt_id_karyawan.Text & "', '" & txt_nama_karyawan.Text & "', '" & txt_lahir.Text & "','" & DateTimePicker1.Text & "','" & cmb_jk.Text & "','" & cmb_agama.Text & "','" & txt_hp.Text & "','" & txt_alamat.Text & "', '" & cmb_status.Text & "','" & txt_foto.Text & "')"
+                CMD = New OleDb.OleDbCommand(simpan, Conn)
+            CMD.ExecuteNonQuery()
+            MsgBox("Input Data Sukses")
+            Call Foto1()
+        Else
+            MsgBox("Data Sudah Ada")
+        End If
+        Call MatikanForm()
+        Call KosongkanForm()
+        Call TampilkanData()
+        End If
     End Sub
 End Class
