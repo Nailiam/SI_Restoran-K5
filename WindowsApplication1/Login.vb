@@ -2,7 +2,7 @@
     Private Sub btn_Login_Click(sender As Object, e As EventArgs) Handles btn_Login.Click
         Call koneksiDB()
         Dim cek As String
-        cek = "Select * From Kasir Where Username= '" & txtUN.Text & "'and Password = '" & txtPass.Text & "'"
+        cek = "Select * From Kasir Where ID_Kasir= '" & txtUN.Text & "'and Password = '" & txtPass.Text & "'"
         CMD = New OleDb.OleDbCommand(cek, Conn)
         CMD.ExecuteNonQuery()
         DM = CMD.ExecuteReader
