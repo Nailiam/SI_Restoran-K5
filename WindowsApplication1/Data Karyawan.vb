@@ -34,7 +34,7 @@ Public Class Data_Karyawan
     End Sub
     Sub TampilkanData()
         Call koneksiDB()
-        DA = New OleDb.OleDbDataAdapter("Select * from From Data Karyawan", Conn)
+        DA = New OleDb.OleDbDataAdapter("Select * from Kasir", Conn)
         DS = New DataSet
         DA.Fill(DS)
         DataGridView1.DataSource = DS.Tables(0)
