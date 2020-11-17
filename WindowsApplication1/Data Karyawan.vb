@@ -16,6 +16,7 @@ Public Class Data_Karyawan
         txt_id_karyawan.Enabled = False
         txt_nama_karyawan.Enabled = False
         txt_lahir.Enabled = False
+        DateTimePicker1.Enabled = False
         cmb_jk.Enabled = False
         cmb_agama.Enabled = False
         txt_hp.Enabled = False
@@ -26,6 +27,7 @@ Public Class Data_Karyawan
         txt_id_karyawan.Enabled = True
         txt_nama_karyawan.Enabled = True
         txt_lahir.Enabled = True
+        DateTimePicker1.Enabled = True
         cmb_jk.Enabled = True
         cmb_agama.Enabled = True
         txt_hp.Enabled = True
