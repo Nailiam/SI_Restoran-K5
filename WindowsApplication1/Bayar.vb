@@ -14,28 +14,28 @@
         txtjumlah.Text = ""
         txtidmenu.Text = ""
     End Sub
-        Sub MatikanForm()
+    Sub MatikanForm()
         txtkodetransaksi.Enabled = False
         txtnama.Enabled = False
         txttotal.Enabled = False
         txtjumlah.Enabled = False
         txtidmenu.Enabled = False
     End Sub
-        Sub HidupkanForm()
+    Sub HidupkanForm()
         txtkodetransaksi.Enabled = True
         txtnama.Enabled = True
         txttotal.Enabled = True
         txtjumlah.Enabled = True
         txtidmenu.Enabled = True
     End Sub
-        Sub TampilkanData()
-            Call koneksiDB()
+    Sub TampilkanData()
+        Call koneksiDB()
         DA = New OleDb.OleDbDataAdapter("select * from Bayar", Conn)
         DS = New DataSet
-            DA.Fill(DS)
-            DataGridView1.DataSource = DS.Tables(0)
-            DataGridView1.ReadOnly = True
-        End Sub
+        DA.Fill(DS)
+        DataGridView1.DataSource = DS.Tables(0)
+        DataGridView1.ReadOnly = True
+    End Sub
 
     Private Sub btninput_Click(sender As Object, e As EventArgs) Handles btninput.Click
         Call HidupkanForm()
@@ -53,7 +53,7 @@
 
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
         If txtkodetransaksi.Text = "" Or txtnama.Text = "" Or txttotal.Text = "" Or txtjumlah.Text = "" Or txtidmenu.Text = "" Then
-            MsgBox("Data pPembayaran Belum Lengkap")
+            MsgBox("Data Pembayaran Belum Lengkap")
             Exit Sub
         Else
             Call koneksiDB()
@@ -115,14 +115,14 @@
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-            On Error Resume Next
+        On Error Resume Next
         txtkodetransaksi.Text = DataGridView1.Rows(e.RowIndex).Cells(0).Value
         txtnama.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value
-
         txttotal.Text = DataGridView1.Rows(e.RowIndex).Cells(2).Value
         txtjumlah.Text = DataGridView1.Rows(e.RowIndex).Cells(3).Value
         txtidmenu.Text = DataGridView1.Rows(e.RowIndex).Cells(4).Value
         Call HidupkanForm()
         txtkodetransaksi.Enabled = False
     End Sub
-    End Class
+
+End Class
