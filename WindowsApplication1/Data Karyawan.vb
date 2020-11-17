@@ -51,13 +51,13 @@ Public Class Data_Karyawan
             Exit Sub
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand(" select * from Karyawan where id_karyawan ='" & txt_id_karyawan.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand(" select * from Kasir where id_kasir ='" & txt_id_karyawan.Text & "'", Conn)
             DM = CMD.ExecuteReader
         DM.Read()
         If Not DM.HasRows Then
             Call koneksiDB()
             Dim simpan As String
-                simpan = "insert into Karyawan values ('" &
+                simpan = "insert into Kasir values ('" &
            txt_id_karyawan.Text & "', '" & txt_nama_karyawan.Text & "', '" & txt_lahir.Text & "','" & DateTimePicker1.Text & "','" & cmb_jk.Text & "','" & cmb_agama.Text & "','" & txt_hp.Text & "','" & txt_alamat.Text & "', '" & cmb_status.Text & "','" & txt_foto.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
             CMD.ExecuteNonQuery()
