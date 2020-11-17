@@ -42,7 +42,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles save.Click
-        If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or jumlah_pemesanan.Text = "" Then
+        If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or DateTimePicker1.Text = "" Or jumlah_pemesanan.Text = "" Then
             MsgBox("Data Pesanan Belum Lengkap")
             Exit Sub
         Else
@@ -53,8 +53,7 @@
             If Not DM.HasRows Then
                 Call koneksiDB()
                 Dim simpan As String
-                simpan = "insert into Pesan values ('" & kode_pemesanan.Text &
-               "', '" & ID_Pelanggan.Text & "', '" & DateTimePicker1.Text & "','" & jumlah_pemesanan.Text & "')"
+                simpan = "insert into Pesan values ('" & kode_pemesanan.Text & "', '" & ID_Pelanggan.Text & "', '" & DateTimePicker1.Text & "','" & jumlah_pemesanan.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
                 MsgBox("Input Data Sukses")
@@ -68,13 +67,12 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles edit.Click
-        If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or jumlah_pemesanan.Text = "" Then
+        If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or DateTimePicker1.Text = "" Or jumlah_pemesanan.Text = "" Then
             MsgBox("Data Pesanan Belum Lengkap")
             Exit Sub
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand("update Pesan set ID_Pelanggan = '" &
-           ID_Pelanggan.Text & "', Tanggal_Pesanan = '" & DateTimePicker1.Text & "',Jumlah_Pesanan = '" & jumlah_pemesanan.Text & "' where kode_Pesanan ='" & kode_pemesanan.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand("update Pesan set ID_Pelanggan = '" & ID_Pelanggan.Text & "', Tanggal_Pesanan = '" & DateTimePicker1.Text & "',Jumlah_Pesanan = '" & jumlah_pemesanan.Text & "' where kode_Pesanan ='" & kode_pemesanan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
         End If
