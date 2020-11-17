@@ -6,16 +6,19 @@
     Sub KosongkanForm()
         kode_pemesanan.Text = ""
         ID_Pelanggan.Text = ""
+        DateTimePicker1.Text = ""
         jumlah_pemesanan.Text = ""
     End Sub
     Sub MatikanForm()
         kode_pemesanan.Enabled = False
         ID_Pelanggan.Enabled = False
+        DateTimePicker1.Enabled = False
         jumlah_pemesanan.Enabled = False
     End Sub
     Sub HidupkanForm()
         kode_pemesanan.Enabled = True
         ID_Pelanggan.Enabled = True
+        DateTimePicker1.Enabled = True
         jumlah_pemesanan.Enabled = True
     End Sub
     Sub TampilkanData()
