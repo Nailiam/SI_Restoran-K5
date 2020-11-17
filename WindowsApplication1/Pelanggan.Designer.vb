@@ -38,6 +38,10 @@ Partial Class Pelanggan
         Me.btn_cancel = New System.Windows.Forms.Button()
         Me.btn_exit = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.txt_idminuman = New System.Windows.Forms.TextBox()
+        Me.txt_idmakanan = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,6 +49,10 @@ Partial Class Pelanggan
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txt_idminuman)
+        Me.GroupBox1.Controls.Add(Me.txt_idmakanan)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txt_nomor)
         Me.GroupBox1.Controls.Add(Me.txt_nama)
         Me.GroupBox1.Controls.Add(Me.txt_id)
@@ -53,7 +61,7 @@ Partial Class Pelanggan
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(27, 26)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(283, 133)
+        Me.GroupBox1.Size = New System.Drawing.Size(283, 194)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Input Data Pelanggan"
@@ -126,7 +134,7 @@ Partial Class Pelanggan
         '
         'btn_input
         '
-        Me.btn_input.Location = New System.Drawing.Point(27, 177)
+        Me.btn_input.Location = New System.Drawing.Point(27, 242)
         Me.btn_input.Name = "btn_input"
         Me.btn_input.Size = New System.Drawing.Size(75, 23)
         Me.btn_input.TabIndex = 2
@@ -135,7 +143,7 @@ Partial Class Pelanggan
         '
         'btn_sv
         '
-        Me.btn_sv.Location = New System.Drawing.Point(129, 177)
+        Me.btn_sv.Location = New System.Drawing.Point(129, 242)
         Me.btn_sv.Name = "btn_sv"
         Me.btn_sv.Size = New System.Drawing.Size(75, 23)
         Me.btn_sv.TabIndex = 3
@@ -144,7 +152,7 @@ Partial Class Pelanggan
         '
         'btn_edit
         '
-        Me.btn_edit.Location = New System.Drawing.Point(235, 177)
+        Me.btn_edit.Location = New System.Drawing.Point(235, 242)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(75, 23)
         Me.btn_edit.TabIndex = 6
@@ -153,7 +161,7 @@ Partial Class Pelanggan
         '
         'btn_delete
         '
-        Me.btn_delete.Location = New System.Drawing.Point(27, 210)
+        Me.btn_delete.Location = New System.Drawing.Point(27, 282)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(75, 23)
         Me.btn_delete.TabIndex = 7
@@ -162,7 +170,7 @@ Partial Class Pelanggan
         '
         'btn_cancel
         '
-        Me.btn_cancel.Location = New System.Drawing.Point(129, 210)
+        Me.btn_cancel.Location = New System.Drawing.Point(129, 282)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(75, 23)
         Me.btn_cancel.TabIndex = 8
@@ -171,7 +179,7 @@ Partial Class Pelanggan
         '
         'btn_exit
         '
-        Me.btn_exit.Location = New System.Drawing.Point(235, 210)
+        Me.btn_exit.Location = New System.Drawing.Point(235, 282)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(75, 23)
         Me.btn_exit.TabIndex = 9
@@ -186,6 +194,38 @@ Partial Class Pelanggan
         Me.Button1.TabIndex = 10
         Me.Button1.Text = "FORM PESAN"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'txt_idminuman
+        '
+        Me.txt_idminuman.Location = New System.Drawing.Point(147, 151)
+        Me.txt_idminuman.Name = "txt_idminuman"
+        Me.txt_idminuman.Size = New System.Drawing.Size(100, 20)
+        Me.txt_idminuman.TabIndex = 13
+        '
+        'txt_idmakanan
+        '
+        Me.txt_idmakanan.Location = New System.Drawing.Point(147, 120)
+        Me.txt_idmakanan.Name = "txt_idmakanan"
+        Me.txt_idmakanan.Size = New System.Drawing.Size(100, 20)
+        Me.txt_idmakanan.TabIndex = 12
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(5, 154)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(70, 13)
+        Me.Label5.TabIndex = 11
+        Me.Label5.Text = "ID Minuman :"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 123)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(72, 13)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "ID Makanan :"
         '
         'Pelanggan
         '
@@ -227,4 +267,8 @@ Partial Class Pelanggan
     Friend WithEvents btn_cancel As Button
     Friend WithEvents btn_exit As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents txt_idminuman As TextBox
+    Friend WithEvents txt_idmakanan As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
 End Class
