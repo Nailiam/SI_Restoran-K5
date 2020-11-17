@@ -41,7 +41,7 @@ Partial Class Kasir
         Me.txt_id = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblselamat = New System.Windows.Forms.Label()
+        Me.LabelID = New System.Windows.Forms.Label()
         Me.btn_exit = New System.Windows.Forms.Button()
         Me.btn_cancel = New System.Windows.Forms.Button()
         Me.btn_delete = New System.Windows.Forms.Button()
@@ -76,7 +76,7 @@ Partial Class Kasir
         Me.Input_Data_Kasir.Controls.Add(Me.txt_id)
         Me.Input_Data_Kasir.Controls.Add(Me.Label3)
         Me.Input_Data_Kasir.Controls.Add(Me.Label2)
-        Me.Input_Data_Kasir.Controls.Add(Me.lblselamat)
+        Me.Input_Data_Kasir.Controls.Add(Me.LabelID)
         Me.Input_Data_Kasir.Location = New System.Drawing.Point(22, 23)
         Me.Input_Data_Kasir.Name = "Input_Data_Kasir"
         Me.Input_Data_Kasir.Size = New System.Drawing.Size(312, 411)
@@ -230,14 +230,14 @@ Partial Class Kasir
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Nama Kasir :"
         '
-        'lblselamat
+        'LabelID
         '
-        Me.lblselamat.AutoSize = True
-        Me.lblselamat.Location = New System.Drawing.Point(6, 30)
-        Me.lblselamat.Name = "lblselamat"
-        Me.lblselamat.Size = New System.Drawing.Size(50, 13)
-        Me.lblselamat.TabIndex = 0
-        Me.lblselamat.Text = "ID Kasir :"
+        Me.LabelID.AutoSize = True
+        Me.LabelID.Location = New System.Drawing.Point(6, 30)
+        Me.LabelID.Name = "LabelID"
+        Me.LabelID.Size = New System.Drawing.Size(50, 13)
+        Me.LabelID.TabIndex = 0
+        Me.LabelID.Text = "ID Kasir :"
         '
         'btn_exit
         '
@@ -349,7 +349,7 @@ Partial Class Kasir
     Friend WithEvents txt_id As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents lblselamat As Label
+    Friend WithEvents LabelID As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents cmb_jeniskelamin As ComboBox
     Friend WithEvents btn_exit As Button

@@ -22,13 +22,13 @@ Partial Class Data_Menu_Makanan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Grupbox1 = New System.Windows.Forms.GroupBox()
+        Me.lblwelcome = New System.Windows.Forms.GroupBox()
         Me.txtHargamakan = New System.Windows.Forms.TextBox()
         Me.txtJenismakan = New System.Windows.Forms.TextBox()
         Me.txtIdMakanan = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblwelcome = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnInput = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnedit = New System.Windows.Forms.Button()
@@ -39,25 +39,25 @@ Partial Class Data_Menu_Makanan
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btn_Minuman = New System.Windows.Forms.Button()
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.Grupbox1.SuspendLayout()
+        Me.lblwelcome.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Grupbox1
+        'lblwelcome
         '
-        Me.Grupbox1.Controls.Add(Me.txtHargamakan)
-        Me.Grupbox1.Controls.Add(Me.txtJenismakan)
-        Me.Grupbox1.Controls.Add(Me.txtIdMakanan)
-        Me.Grupbox1.Controls.Add(Me.Label5)
-        Me.Grupbox1.Controls.Add(Me.Label2)
-        Me.Grupbox1.Controls.Add(Me.lblwelcome)
-        Me.Grupbox1.Location = New System.Drawing.Point(12, 12)
-        Me.Grupbox1.Name = "Grupbox1"
-        Me.Grupbox1.Size = New System.Drawing.Size(321, 194)
-        Me.Grupbox1.TabIndex = 0
-        Me.Grupbox1.TabStop = False
-        Me.Grupbox1.Text = "Input_Menu_Makanan"
+        Me.lblwelcome.Controls.Add(Me.txtHargamakan)
+        Me.lblwelcome.Controls.Add(Me.txtJenismakan)
+        Me.lblwelcome.Controls.Add(Me.txtIdMakanan)
+        Me.lblwelcome.Controls.Add(Me.Label5)
+        Me.lblwelcome.Controls.Add(Me.Label2)
+        Me.lblwelcome.Controls.Add(Me.Label1)
+        Me.lblwelcome.Location = New System.Drawing.Point(12, 12)
+        Me.lblwelcome.Name = "lblwelcome"
+        Me.lblwelcome.Size = New System.Drawing.Size(321, 194)
+        Me.lblwelcome.TabIndex = 0
+        Me.lblwelcome.TabStop = False
+        Me.lblwelcome.Text = "Input_Menu_Makanan"
         '
         'txtHargamakan
         '
@@ -98,14 +98,14 @@ Partial Class Data_Menu_Makanan
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Jenis_Makanan"
         '
-        'lblwelcome
+        'Label1
         '
-        Me.lblwelcome.AutoSize = True
-        Me.lblwelcome.Location = New System.Drawing.Point(16, 35)
-        Me.lblwelcome.Name = "lblwelcome"
-        Me.lblwelcome.Size = New System.Drawing.Size(69, 13)
-        Me.lblwelcome.TabIndex = 0
-        Me.lblwelcome.Text = "ID_Makanan"
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(16, 35)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(69, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "ID_Makanan"
         '
         'btnInput
         '
@@ -211,21 +211,21 @@ Partial Class Data_Menu_Makanan
         Me.Controls.Add(Me.btnedit)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnInput)
-        Me.Controls.Add(Me.Grupbox1)
+        Me.Controls.Add(Me.lblwelcome)
         Me.Name = "Data_Menu_Makanan"
         Me.Text = "Data Menu Makanan"
-        Me.Grupbox1.ResumeLayout(False)
-        Me.Grupbox1.PerformLayout()
+        Me.lblwelcome.ResumeLayout(False)
+        Me.lblwelcome.PerformLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Grupbox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents lblwelcome As System.Windows.Forms.GroupBox
     Friend WithEvents txtIdMakanan As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents lblwelcome As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnInput As System.Windows.Forms.Button
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents btnedit As System.Windows.Forms.Button

@@ -22,7 +22,7 @@ Partial Class Data_Karyawan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DGV2 = New System.Windows.Forms.DataGridView()
         Me.btn_simpan = New System.Windows.Forms.Button()
         Me.btn_cari = New System.Windows.Forms.Button()
         Me.btn_delete = New System.Windows.Forms.Button()
@@ -30,7 +30,7 @@ Partial Class Data_Karyawan
         Me.Label11 = New System.Windows.Forms.Label()
         Me.btn_browse = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblselamat = New System.Windows.Forms.GroupBox()
         Me.cmb_status = New System.Windows.Forms.ComboBox()
         Me.txt_alamat = New System.Windows.Forms.RichTextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -51,23 +51,23 @@ Partial Class Data_Karyawan
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGV2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
+        Me.lblselamat.SuspendLayout()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'DGV2
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(30, 447)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.Size = New System.Drawing.Size(542, 66)
-        Me.DataGridView1.TabIndex = 19
+        Me.DGV2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGV2.Location = New System.Drawing.Point(12, 423)
+        Me.DGV2.Name = "DGV2"
+        Me.DGV2.RowHeadersWidth = 51
+        Me.DGV2.Size = New System.Drawing.Size(561, 91)
+        Me.DGV2.TabIndex = 19
         '
         'btn_simpan
         '
-        Me.btn_simpan.Location = New System.Drawing.Point(333, 337)
+        Me.btn_simpan.Location = New System.Drawing.Point(322, 378)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(76, 32)
         Me.btn_simpan.TabIndex = 18
@@ -76,7 +76,7 @@ Partial Class Data_Karyawan
         '
         'btn_cari
         '
-        Me.btn_cari.Location = New System.Drawing.Point(497, 337)
+        Me.btn_cari.Location = New System.Drawing.Point(497, 378)
         Me.btn_cari.Name = "btn_cari"
         Me.btn_cari.Size = New System.Drawing.Size(76, 32)
         Me.btn_cari.TabIndex = 17
@@ -85,7 +85,7 @@ Partial Class Data_Karyawan
         '
         'btn_delete
         '
-        Me.btn_delete.Location = New System.Drawing.Point(415, 337)
+        Me.btn_delete.Location = New System.Drawing.Point(412, 378)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(76, 32)
         Me.btn_delete.TabIndex = 16
@@ -94,7 +94,7 @@ Partial Class Data_Karyawan
         '
         'txt_foto
         '
-        Me.txt_foto.Location = New System.Drawing.Point(412, 301)
+        Me.txt_foto.Location = New System.Drawing.Point(412, 340)
         Me.txt_foto.Name = "txt_foto"
         Me.txt_foto.Size = New System.Drawing.Size(161, 20)
         Me.txt_foto.TabIndex = 15
@@ -102,7 +102,7 @@ Partial Class Data_Karyawan
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(330, 304)
+        Me.Label11.Location = New System.Drawing.Point(319, 343)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(52, 13)
         Me.Label11.TabIndex = 14
@@ -110,7 +110,7 @@ Partial Class Data_Karyawan
         '
         'btn_browse
         '
-        Me.btn_browse.Location = New System.Drawing.Point(497, 260)
+        Me.btn_browse.Location = New System.Drawing.Point(497, 302)
         Me.btn_browse.Name = "btn_browse"
         Me.btn_browse.Size = New System.Drawing.Size(76, 32)
         Me.btn_browse.TabIndex = 13
@@ -119,38 +119,38 @@ Partial Class Data_Karyawan
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(333, 77)
+        Me.PictureBox1.Location = New System.Drawing.Point(322, 43)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(240, 174)
+        Me.PictureBox1.Size = New System.Drawing.Size(251, 253)
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
-        'GroupBox1
+        'lblselamat
         '
-        Me.GroupBox1.Controls.Add(Me.cmb_status)
-        Me.GroupBox1.Controls.Add(Me.txt_alamat)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.cmb_agama)
-        Me.GroupBox1.Controls.Add(Me.cmb_jk)
-        Me.GroupBox1.Controls.Add(Me.txt_lahir)
-        Me.GroupBox1.Controls.Add(Me.txt_hp)
-        Me.GroupBox1.Controls.Add(Me.txt_nama_karyawan)
-        Me.GroupBox1.Controls.Add(Me.txt_id_karyawan)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(30, 68)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(293, 369)
-        Me.GroupBox1.TabIndex = 11
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Data Karyawan"
+        Me.lblselamat.Controls.Add(Me.cmb_status)
+        Me.lblselamat.Controls.Add(Me.txt_alamat)
+        Me.lblselamat.Controls.Add(Me.DateTimePicker1)
+        Me.lblselamat.Controls.Add(Me.cmb_agama)
+        Me.lblselamat.Controls.Add(Me.cmb_jk)
+        Me.lblselamat.Controls.Add(Me.txt_lahir)
+        Me.lblselamat.Controls.Add(Me.txt_hp)
+        Me.lblselamat.Controls.Add(Me.txt_nama_karyawan)
+        Me.lblselamat.Controls.Add(Me.txt_id_karyawan)
+        Me.lblselamat.Controls.Add(Me.Label10)
+        Me.lblselamat.Controls.Add(Me.Label9)
+        Me.lblselamat.Controls.Add(Me.Label8)
+        Me.lblselamat.Controls.Add(Me.Label7)
+        Me.lblselamat.Controls.Add(Me.Label6)
+        Me.lblselamat.Controls.Add(Me.Label5)
+        Me.lblselamat.Controls.Add(Me.Label4)
+        Me.lblselamat.Controls.Add(Me.Label3)
+        Me.lblselamat.Controls.Add(Me.Label2)
+        Me.lblselamat.Location = New System.Drawing.Point(12, 43)
+        Me.lblselamat.Name = "lblselamat"
+        Me.lblselamat.Size = New System.Drawing.Size(301, 367)
+        Me.lblselamat.TabIndex = 11
+        Me.lblselamat.TabStop = False
+        Me.lblselamat.Text = "Data Karyawan"
         '
         'cmb_status
         '
@@ -307,7 +307,7 @@ Partial Class Data_Karyawan
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(18, 17)
+        Me.Label1.Location = New System.Drawing.Point(3, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(208, 31)
         Me.Label1.TabIndex = 10
@@ -322,7 +322,7 @@ Partial Class Data_Karyawan
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 526)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DGV2)
         Me.Controls.Add(Me.btn_simpan)
         Me.Controls.Add(Me.btn_cari)
         Me.Controls.Add(Me.btn_delete)
@@ -330,20 +330,20 @@ Partial Class Data_Karyawan
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.btn_browse)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.lblselamat)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Data_Karyawan"
         Me.Text = "Data Karyawan"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGV2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.lblselamat.ResumeLayout(False)
+        Me.lblselamat.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGV2 As DataGridView
     Friend WithEvents btn_simpan As Button
     Friend WithEvents btn_cari As Button
     Friend WithEvents btn_delete As Button
@@ -351,7 +351,7 @@ Partial Class Data_Karyawan
     Friend WithEvents Label11 As Label
     Friend WithEvents btn_browse As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents lblselamat As GroupBox
     Friend WithEvents cmb_status As ComboBox
     Friend WithEvents txt_alamat As RichTextBox
     Friend WithEvents DateTimePicker1 As DateTimePicker

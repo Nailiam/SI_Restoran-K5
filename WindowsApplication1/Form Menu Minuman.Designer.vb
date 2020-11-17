@@ -28,7 +28,7 @@ Partial Class Menu_Minuman
         Me.txt_id_minuman = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblwelcome = New System.Windows.Forms.Label()
         Me.btn_exit = New System.Windows.Forms.Button()
         Me.btn_cancel = New System.Windows.Forms.Button()
         Me.btn_delete = New System.Windows.Forms.Button()
@@ -50,7 +50,7 @@ Partial Class Menu_Minuman
         Me.GroupBox1.Controls.Add(Me.txt_id_minuman)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.lblwelcome)
         Me.GroupBox1.Location = New System.Drawing.Point(29, 20)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(236, 148)
@@ -97,14 +97,14 @@ Partial Class Menu_Minuman
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Jenis Minuman :"
         '
-        'Label1
+        'lblwelcome
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 38)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID Minuman :"
+        Me.lblwelcome.AutoSize = True
+        Me.lblwelcome.Location = New System.Drawing.Point(6, 38)
+        Me.lblwelcome.Name = "lblwelcome"
+        Me.lblwelcome.Size = New System.Drawing.Size(70, 13)
+        Me.lblwelcome.TabIndex = 0
+        Me.lblwelcome.Text = "ID Minuman :"
         '
         'btn_exit
         '
@@ -217,7 +217,7 @@ Partial Class Menu_Minuman
     Friend WithEvents txt_id_minuman As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblwelcome As Label
     Friend WithEvents btn_exit As Button
     Friend WithEvents btn_cancel As Button
     Friend WithEvents btn_delete As Button
