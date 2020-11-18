@@ -22,12 +22,17 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtUN = New System.Windows.Forms.TextBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.btn_Login = New System.Windows.Forms.Button()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -62,33 +67,52 @@ Partial Class Login
         '
         'txtUN
         '
+        Me.txtUN.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUN.Location = New System.Drawing.Point(159, 94)
         Me.txtUN.Name = "txtUN"
-        Me.txtUN.Size = New System.Drawing.Size(153, 20)
+        Me.txtUN.Size = New System.Drawing.Size(153, 27)
         Me.txtUN.TabIndex = 3
         '
         'txtPass
         '
+        Me.txtPass.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.Location = New System.Drawing.Point(159, 143)
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(153, 20)
+        Me.txtPass.Size = New System.Drawing.Size(150, 27)
         Me.txtPass.TabIndex = 4
         Me.txtPass.UseSystemPasswordChar = True
         '
         'btn_Login
         '
-        Me.btn_Login.Location = New System.Drawing.Point(228, 245)
+        Me.btn_Login.Location = New System.Drawing.Point(225, 245)
         Me.btn_Login.Name = "btn_Login"
-        Me.btn_Login.Size = New System.Drawing.Size(84, 23)
+        Me.btn_Login.Size = New System.Drawing.Size(84, 38)
         Me.btn_Login.TabIndex = 5
         Me.btn_Login.Text = "Login "
         Me.btn_Login.UseVisualStyleBackColor = True
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(43, 194)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(75, 110)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(358, 316)
+        Me.ClientSize = New System.Drawing.Size(333, 316)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btn_Login)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.txtUN)
@@ -97,6 +121,7 @@ Partial Class Login
         Me.Controls.Add(Me.Label1)
         Me.Name = "Login"
         Me.Text = "Login"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -108,4 +133,6 @@ Partial Class Login
     Friend WithEvents txtUN As TextBox
     Friend WithEvents txtPass As TextBox
     Friend WithEvents btn_Login As Button
+    Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

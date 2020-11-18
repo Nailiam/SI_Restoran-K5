@@ -30,7 +30,7 @@ Partial Class Data_Karyawan
         Me.Label11 = New System.Windows.Forms.Label()
         Me.btn_browse = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lblselamat = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmb_status = New System.Windows.Forms.ComboBox()
         Me.txt_alamat = New System.Windows.Forms.RichTextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -51,9 +51,10 @@ Partial Class Data_Karyawan
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.lblselamat = New System.Windows.Forms.Label()
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.lblselamat.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DGV2
@@ -125,32 +126,32 @@ Partial Class Data_Karyawan
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
-        'lblselamat
+        'GroupBox1
         '
-        Me.lblselamat.Controls.Add(Me.cmb_status)
-        Me.lblselamat.Controls.Add(Me.txt_alamat)
-        Me.lblselamat.Controls.Add(Me.DateTimePicker1)
-        Me.lblselamat.Controls.Add(Me.cmb_agama)
-        Me.lblselamat.Controls.Add(Me.cmb_jk)
-        Me.lblselamat.Controls.Add(Me.txt_lahir)
-        Me.lblselamat.Controls.Add(Me.txt_hp)
-        Me.lblselamat.Controls.Add(Me.txt_nama_karyawan)
-        Me.lblselamat.Controls.Add(Me.txt_id_karyawan)
-        Me.lblselamat.Controls.Add(Me.Label10)
-        Me.lblselamat.Controls.Add(Me.Label9)
-        Me.lblselamat.Controls.Add(Me.Label8)
-        Me.lblselamat.Controls.Add(Me.Label7)
-        Me.lblselamat.Controls.Add(Me.Label6)
-        Me.lblselamat.Controls.Add(Me.Label5)
-        Me.lblselamat.Controls.Add(Me.Label4)
-        Me.lblselamat.Controls.Add(Me.Label3)
-        Me.lblselamat.Controls.Add(Me.Label2)
-        Me.lblselamat.Location = New System.Drawing.Point(12, 43)
-        Me.lblselamat.Name = "lblselamat"
-        Me.lblselamat.Size = New System.Drawing.Size(301, 367)
-        Me.lblselamat.TabIndex = 11
-        Me.lblselamat.TabStop = False
-        Me.lblselamat.Text = "Data Karyawan"
+        Me.GroupBox1.Controls.Add(Me.cmb_status)
+        Me.GroupBox1.Controls.Add(Me.txt_alamat)
+        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.cmb_agama)
+        Me.GroupBox1.Controls.Add(Me.cmb_jk)
+        Me.GroupBox1.Controls.Add(Me.txt_lahir)
+        Me.GroupBox1.Controls.Add(Me.txt_hp)
+        Me.GroupBox1.Controls.Add(Me.txt_nama_karyawan)
+        Me.GroupBox1.Controls.Add(Me.txt_id_karyawan)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 43)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(301, 367)
+        Me.GroupBox1.TabIndex = 11
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Data Karyawan"
         '
         'cmb_status
         '
@@ -317,11 +318,21 @@ Partial Class Data_Karyawan
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'lblselamat
+        '
+        Me.lblselamat.AutoSize = True
+        Me.lblselamat.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblselamat.Location = New System.Drawing.Point(217, 9)
+        Me.lblselamat.Name = "lblselamat"
+        Me.lblselamat.Size = New System.Drawing.Size(0, 31)
+        Me.lblselamat.TabIndex = 20
+        '
         'Data_Karyawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 526)
+        Me.Controls.Add(Me.lblselamat)
         Me.Controls.Add(Me.DGV2)
         Me.Controls.Add(Me.btn_simpan)
         Me.Controls.Add(Me.btn_cari)
@@ -330,14 +341,14 @@ Partial Class Data_Karyawan
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.btn_browse)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.lblselamat)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Data_Karyawan"
         Me.Text = "Data Karyawan"
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.lblselamat.ResumeLayout(False)
-        Me.lblselamat.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -351,7 +362,7 @@ Partial Class Data_Karyawan
     Friend WithEvents Label11 As Label
     Friend WithEvents btn_browse As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents lblselamat As GroupBox
+    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents cmb_status As ComboBox
     Friend WithEvents txt_alamat As RichTextBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
@@ -372,4 +383,5 @@ Partial Class Data_Karyawan
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents lblselamat As Label
 End Class

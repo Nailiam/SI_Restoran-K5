@@ -16,8 +16,6 @@
             MsgBox(" Maaf Username atau Password Anda Salah ")
             Me.Show()
         End If
-        Data_Karyawan.Label1.Text = txtUN.Text
-        Data_Menu_Makanan.Label1.Text = txtUN.Text
-        Menu_Minuman.lblwelcome.Text = txtUN.Text
+        Data_Karyawan.lblselamat.Text = txtUN.Text
     End Sub
 End Class

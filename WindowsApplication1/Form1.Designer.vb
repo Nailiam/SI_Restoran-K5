@@ -52,7 +52,7 @@ Partial Class Data_Menu_Makanan
         Me.lblwelcome.Controls.Add(Me.Label5)
         Me.lblwelcome.Controls.Add(Me.Label2)
         Me.lblwelcome.Controls.Add(Me.Label1)
-        Me.lblwelcome.Location = New System.Drawing.Point(12, 12)
+        Me.lblwelcome.Location = New System.Drawing.Point(12, 19)
         Me.lblwelcome.Name = "lblwelcome"
         Me.lblwelcome.Size = New System.Drawing.Size(321, 194)
         Me.lblwelcome.TabIndex = 0
@@ -109,7 +109,7 @@ Partial Class Data_Menu_Makanan
         '
         'btnInput
         '
-        Me.btnInput.Location = New System.Drawing.Point(21, 212)
+        Me.btnInput.Location = New System.Drawing.Point(21, 234)
         Me.btnInput.Name = "btnInput"
         Me.btnInput.Size = New System.Drawing.Size(75, 23)
         Me.btnInput.TabIndex = 1
@@ -118,7 +118,7 @@ Partial Class Data_Menu_Makanan
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(117, 212)
+        Me.btnSave.Location = New System.Drawing.Point(128, 234)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 2
@@ -127,7 +127,7 @@ Partial Class Data_Menu_Makanan
         '
         'btnedit
         '
-        Me.btnedit.Location = New System.Drawing.Point(211, 212)
+        Me.btnedit.Location = New System.Drawing.Point(241, 234)
         Me.btnedit.Name = "btnedit"
         Me.btnedit.Size = New System.Drawing.Size(75, 23)
         Me.btnedit.TabIndex = 3
@@ -136,7 +136,7 @@ Partial Class Data_Menu_Makanan
         '
         'btndelete
         '
-        Me.btndelete.Location = New System.Drawing.Point(21, 254)
+        Me.btndelete.Location = New System.Drawing.Point(21, 278)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(75, 23)
         Me.btndelete.TabIndex = 4
@@ -145,7 +145,7 @@ Partial Class Data_Menu_Makanan
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(117, 254)
+        Me.btnCancel.Location = New System.Drawing.Point(128, 278)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 5
@@ -154,7 +154,7 @@ Partial Class Data_Menu_Makanan
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(211, 254)
+        Me.btnExit.Location = New System.Drawing.Point(241, 278)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 23)
         Me.btnExit.TabIndex = 6
