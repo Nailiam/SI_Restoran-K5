@@ -6,7 +6,6 @@
     Sub KosongkanForm()
         kode_pemesanan.Text = ""
         ID_Pelanggan.Text = ""
-        DateTimePicker1.Text = ""
         jumlah_pemesanan.Text = ""
     End Sub
     Sub MatikanForm()
@@ -45,7 +44,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles save.Click
-        If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or DateTimePicker1.Text = "" Or jumlah_pemesanan.Text = "" Then
+        If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or jumlah_pemesanan.Text = "" Then
             MsgBox("Data Pesanan Belum Lengkap")
             Exit Sub
         Else
@@ -70,7 +69,7 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles edit.Click
-        If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or DateTimePicker1.Text = "" Or jumlah_pemesanan.Text = "" Then
+        If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or jumlah_pemesanan.Text = "" Then
             MsgBox("Data Pesanan Belum Lengkap")
             Exit Sub
         Else
@@ -112,7 +111,6 @@
         DateTimePicker1.CustomFormat = "dddd, dd/MM/yyyy"
         DateTimePicker1.Value = Format(DataGridView1.Rows(e.RowIndex).Cells(2).Value)
         jumlah_pemesanan.Text = DataGridView1.Rows(e.RowIndex).Cells(3).Value
-
         Call HidupkanForm()
         kode_pemesanan.Enabled = False
     End Sub
