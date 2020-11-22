@@ -60,7 +60,7 @@ Public Class Data_Karyawan
                 Call koneksiDB()
                 Dim simpan As String
                 simpan = "insert into Kasir values ('" &
-           txt_id_karyawan.Text & "', '" & txt_nama_karyawan.Text & "', '" & txt_lahir.Text & "','" & DateTimePicker1.Text & "','" &
+           txt_id_karyawan.Text & "', '" & txt_nama_karyawan.Text & "', '" & txt_lahir.Text & "','" & DateTimePicker1.Value & "','" &
                 cmb_jk.Text & "','" & cmb_agama.Text & "','" & txt_hp.Text & "','" & txt_alamat.Text & "', '" & cmb_status.Text & "','" &
                 txt_foto.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
