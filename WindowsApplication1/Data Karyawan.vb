@@ -47,8 +47,7 @@ Public Class Data_Karyawan
     End Sub
 
     Private Sub btn_simpan_Click(sender As Object, e As EventArgs) Handles btn_simpan.Click
-        If txt_id_karyawan.Text = "" Or txt_nama_karyawan.Text = "" Or txt_lahir.Text = "" Or cmb_jk.Text = "" Or
-    txt_hp.Text = "" Or txt_alamat.Text = "" Or cmb_agama.Text = "" Or cmb_status.Text = "" Or txt_foto.Text = "" Then
+        If txt_id_karyawan.Text = "" Or txt_nama_karyawan.Text = "" Or cmb_jk.Text = "" Or txt_lahir.Text = "" Or Format(DateTimePicker1.Value, "dd-mm-yyyy") Or cmb_agama.Text = "" Or txt_hp.Text = "" Or txt_alamat.Text = "" Or cmb_status.Text = "" Or txt_foto.Text = "" Then
             MsgBox("Data Karyawan Belum Lengkap")
             Exit Sub
         Else
@@ -60,8 +59,7 @@ Public Class Data_Karyawan
                 Call koneksiDB()
                 Dim simpan As String
                 simpan = "insert into Kasir values ('" &
-           txt_id_karyawan.Text & "', '" & txt_nama_karyawan.Text & "', '" & txt_lahir.Text & "','" & DateTimePicker1.Value & "','" &
-                cmb_jk.Text & "','" & cmb_agama.Text & "','" & txt_hp.Text & "','" & txt_alamat.Text & "', '" & cmb_status.Text & "','" &
+           txt_id_karyawan.Text & "', '" & txt_nama_karyawan.Text & "', '" & cmb_jk.Text & "','" & txt_lahir.Text & "','" & DateTimePicker1.Value & "','" & cmb_agama.Text & "','" & txt_hp.Text & "','" & txt_alamat.Text & "', '" & cmb_status.Text & "','" &
                 txt_foto.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
