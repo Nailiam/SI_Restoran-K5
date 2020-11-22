@@ -55,7 +55,7 @@
             If Not DM.HasRows Then
                 Call koneksiDB()
                 Dim simpan As String
-                simpan = "insert into Pesan values ('" & kode_pemesanan.Text & "', '" & ID_Pelanggan.Text & "', '" & DateTimePicker1.Text & "','" & jumlah_pemesanan.Text & "')"
+                simpan = "insert into Pesan values ('" & kode_pemesanan.Text & "', '" & ID_Pelanggan.Text & "', '" & DateTimePicker1.Value & "','" & jumlah_pemesanan.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
                 MsgBox("Input Data Sukses")
@@ -74,7 +74,7 @@
             Exit Sub
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand("update Pesan set ID_Pelanggan = '" & ID_Pelanggan.Text & "', Tanggal_Pesanan = '" & DateTimePicker1.Text & "',Jumlah_Pesanan = '" & jumlah_pemesanan.Text & "' where kode_Pesanan ='" & kode_pemesanan.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand("update Pesan set ID_Pelanggan = '" & ID_Pelanggan.Text & "', Tanggal_Pesanan = '" & DateTimePicker1.Value & "',Jumlah_Pesanan = '" & jumlah_pemesanan.Text & "' where kode_Pesanan ='" & kode_pemesanan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
         End If
