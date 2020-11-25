@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Data_Menu_Makanan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Data_Menu_Makanan
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblwelcome = New System.Windows.Forms.GroupBox()
         Me.txtHargamakan = New System.Windows.Forms.TextBox()
@@ -38,7 +38,6 @@ Partial Class Data_Menu_Makanan
         Me.DGV = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btn_Minuman = New System.Windows.Forms.Button()
-        Me.btnLogin = New System.Windows.Forms.Button()
         Me.lblwelcome.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -188,21 +187,11 @@ Partial Class Data_Menu_Makanan
         Me.btn_Minuman.Text = "Form Menu Minuman "
         Me.btn_Minuman.UseVisualStyleBackColor = True
         '
-        'btnLogin
-        '
-        Me.btnLogin.Location = New System.Drawing.Point(422, 320)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(98, 38)
-        Me.btnLogin.TabIndex = 13
-        Me.btnLogin.Text = "Login"
-        Me.btnLogin.UseVisualStyleBackColor = True
-        '
         'Data_Menu_Makanan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(860, 370)
-        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.btn_Minuman)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnExit)
@@ -237,5 +226,4 @@ Partial Class Data_Menu_Makanan
     Friend WithEvents txtHargamakan As TextBox
     Friend WithEvents txtJenismakan As TextBox
     Friend WithEvents btn_Minuman As Button
-    Friend WithEvents btnLogin As Button
 End Class

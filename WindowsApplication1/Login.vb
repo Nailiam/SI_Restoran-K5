@@ -8,9 +8,8 @@
         DM = CMD.ExecuteReader
         If DM.HasRows = True Then
             DM.Read()
-            Data_Menu_Makanan.Show()
-            Menu_Minuman.Show()
             Data_Karyawan.Show()
+            Data_Menu_Makanan.Show()
             Me.Hide()
         Else
             MsgBox(" Maaf Username atau Password Anda Salah ")

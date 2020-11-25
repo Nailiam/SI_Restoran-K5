@@ -23,11 +23,23 @@ Partial Class Bayar
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txttotalkembalian = New System.Windows.Forms.TextBox()
+        Me.txtfreekembalian = New System.Windows.Forms.TextBox()
+        Me.txtkembalian = New System.Windows.Forms.TextBox()
+        Me.txtuangbayar = New System.Windows.Forms.TextBox()
+        Me.txttotalbayar = New System.Windows.Forms.TextBox()
+        Me.txtpajak = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.txtidmenu = New System.Windows.Forms.TextBox()
-        Me.txtjumlah = New System.Windows.Forms.TextBox()
-        Me.txttotal = New System.Windows.Forms.TextBox()
-        Me.txtnama = New System.Windows.Forms.TextBox()
+        Me.txtsubtotal = New System.Windows.Forms.TextBox()
+        Me.txtkodepesanan = New System.Windows.Forms.TextBox()
+        Me.txtidkasir = New System.Windows.Forms.TextBox()
+        Me.txtjamtransaksi = New System.Windows.Forms.TextBox()
         Me.txtkodetransaksi = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -50,11 +62,23 @@ Partial Class Bayar
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txttotalkembalian)
+        Me.GroupBox1.Controls.Add(Me.txtfreekembalian)
+        Me.GroupBox1.Controls.Add(Me.txtkembalian)
+        Me.GroupBox1.Controls.Add(Me.txtuangbayar)
+        Me.GroupBox1.Controls.Add(Me.txttotalbayar)
+        Me.GroupBox1.Controls.Add(Me.txtpajak)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.txtidmenu)
-        Me.GroupBox1.Controls.Add(Me.txtjumlah)
-        Me.GroupBox1.Controls.Add(Me.txttotal)
-        Me.GroupBox1.Controls.Add(Me.txtnama)
+        Me.GroupBox1.Controls.Add(Me.txtsubtotal)
+        Me.GroupBox1.Controls.Add(Me.txtkodepesanan)
+        Me.GroupBox1.Controls.Add(Me.txtidkasir)
+        Me.GroupBox1.Controls.Add(Me.txtjamtransaksi)
         Me.GroupBox1.Controls.Add(Me.txtkodetransaksi)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -62,51 +86,147 @@ Partial Class Bayar
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(37, 40)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(336, 232)
+        Me.GroupBox1.Size = New System.Drawing.Size(321, 426)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Input Data Pembayaran"
         '
+        'txttotalkembalian
+        '
+        Me.txttotalkembalian.Location = New System.Drawing.Point(138, 388)
+        Me.txttotalkembalian.Name = "txttotalkembalian"
+        Me.txttotalkembalian.Size = New System.Drawing.Size(166, 20)
+        Me.txttotalkembalian.TabIndex = 22
+        '
+        'txtfreekembalian
+        '
+        Me.txtfreekembalian.Location = New System.Drawing.Point(138, 355)
+        Me.txtfreekembalian.Name = "txtfreekembalian"
+        Me.txtfreekembalian.Size = New System.Drawing.Size(166, 20)
+        Me.txtfreekembalian.TabIndex = 21
+        '
+        'txtkembalian
+        '
+        Me.txtkembalian.Location = New System.Drawing.Point(138, 318)
+        Me.txtkembalian.Name = "txtkembalian"
+        Me.txtkembalian.Size = New System.Drawing.Size(166, 20)
+        Me.txtkembalian.TabIndex = 20
+        '
+        'txtuangbayar
+        '
+        Me.txtuangbayar.Location = New System.Drawing.Point(138, 285)
+        Me.txtuangbayar.Name = "txtuangbayar"
+        Me.txtuangbayar.Size = New System.Drawing.Size(166, 20)
+        Me.txtuangbayar.TabIndex = 19
+        '
+        'txttotalbayar
+        '
+        Me.txttotalbayar.Location = New System.Drawing.Point(138, 252)
+        Me.txttotalbayar.Name = "txttotalbayar"
+        Me.txttotalbayar.Size = New System.Drawing.Size(166, 20)
+        Me.txttotalbayar.TabIndex = 18
+        '
+        'txtpajak
+        '
+        Me.txtpajak.Location = New System.Drawing.Point(138, 220)
+        Me.txtpajak.Name = "txtpajak"
+        Me.txtpajak.Size = New System.Drawing.Size(166, 20)
+        Me.txtpajak.TabIndex = 17
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(20, 395)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(83, 13)
+        Me.Label12.TabIndex = 16
+        Me.Label12.Text = "Total Kembalian"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(20, 362)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(80, 13)
+        Me.Label11.TabIndex = 15
+        Me.Label11.Text = "Free Kembalian"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(20, 325)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(56, 13)
+        Me.Label10.TabIndex = 14
+        Me.Label10.Text = "Kembalian"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(20, 292)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(63, 13)
+        Me.Label9.TabIndex = 13
+        Me.Label9.Text = "Uang Bayar"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(20, 259)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(61, 13)
+        Me.Label8.TabIndex = 12
+        Me.Label8.Text = "Total Bayar"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(20, 227)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(88, 13)
+        Me.Label7.TabIndex = 11
+        Me.Label7.Text = "Pajak Resto 10%"
+        '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(164, 63)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(138, 63)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(166, 20)
         Me.DateTimePicker1.TabIndex = 2
         '
-        'txtidmenu
+        'txtsubtotal
         '
-        Me.txtidmenu.Location = New System.Drawing.Point(164, 192)
-        Me.txtidmenu.Name = "txtidmenu"
-        Me.txtidmenu.Size = New System.Drawing.Size(166, 20)
-        Me.txtidmenu.TabIndex = 10
+        Me.txtsubtotal.Location = New System.Drawing.Point(138, 192)
+        Me.txtsubtotal.Name = "txtsubtotal"
+        Me.txtsubtotal.Size = New System.Drawing.Size(166, 20)
+        Me.txtsubtotal.TabIndex = 10
         '
-        'txtjumlah
+        'txtkodepesanan
         '
-        Me.txtjumlah.Location = New System.Drawing.Point(164, 162)
-        Me.txtjumlah.Name = "txtjumlah"
-        Me.txtjumlah.Size = New System.Drawing.Size(166, 20)
-        Me.txtjumlah.TabIndex = 9
+        Me.txtkodepesanan.Location = New System.Drawing.Point(138, 162)
+        Me.txtkodepesanan.Name = "txtkodepesanan"
+        Me.txtkodepesanan.Size = New System.Drawing.Size(166, 20)
+        Me.txtkodepesanan.TabIndex = 9
         '
-        'txttotal
+        'txtidkasir
         '
-        Me.txttotal.Location = New System.Drawing.Point(164, 131)
-        Me.txttotal.Name = "txttotal"
-        Me.txttotal.Size = New System.Drawing.Size(166, 20)
-        Me.txttotal.TabIndex = 8
+        Me.txtidkasir.Location = New System.Drawing.Point(138, 131)
+        Me.txtidkasir.Name = "txtidkasir"
+        Me.txtidkasir.Size = New System.Drawing.Size(166, 20)
+        Me.txtidkasir.TabIndex = 8
         '
-        'txtnama
+        'txtjamtransaksi
         '
-        Me.txtnama.Location = New System.Drawing.Point(164, 101)
-        Me.txtnama.Name = "txtnama"
-        Me.txtnama.Size = New System.Drawing.Size(166, 20)
-        Me.txtnama.TabIndex = 7
+        Me.txtjamtransaksi.Location = New System.Drawing.Point(138, 97)
+        Me.txtjamtransaksi.Name = "txtjamtransaksi"
+        Me.txtjamtransaksi.Size = New System.Drawing.Size(166, 20)
+        Me.txtjamtransaksi.TabIndex = 7
         '
         'txtkodetransaksi
         '
-        Me.txtkodetransaksi.Location = New System.Drawing.Point(164, 31)
+        Me.txtkodetransaksi.Location = New System.Drawing.Point(138, 31)
         Me.txtkodetransaksi.Name = "txtkodetransaksi"
         Me.txtkodetransaksi.Size = New System.Drawing.Size(166, 20)
         Me.txtkodetransaksi.TabIndex = 6
@@ -116,36 +236,36 @@ Partial Class Bayar
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(20, 195)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(46, 13)
+        Me.Label6.Size = New System.Drawing.Size(53, 13)
         Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Id Menu"
+        Me.Label6.Text = "Sub Total"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(20, 165)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(85, 13)
+        Me.Label5.Size = New System.Drawing.Size(77, 13)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Jumlah Pesanan"
+        Me.Label5.Text = "Kode Pesanan"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(20, 104)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 13)
+        Me.Label4.Size = New System.Drawing.Size(75, 13)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Nama Kasir"
+        Me.Label4.Text = "Jam Transaksi"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(20, 134)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 13)
+        Me.Label3.Size = New System.Drawing.Size(42, 13)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Total Harga"
+        Me.Label3.Text = "Id Kasir"
         '
         'Label2
         '
@@ -168,9 +288,9 @@ Partial Class Bayar
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
-        Me.GroupBox2.Location = New System.Drawing.Point(408, 40)
+        Me.GroupBox2.Location = New System.Drawing.Point(349, 20)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(370, 232)
+        Me.GroupBox2.Size = New System.Drawing.Size(439, 297)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detail Pembayaran"
@@ -180,12 +300,12 @@ Partial Class Bayar
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(15, 31)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(337, 181)
+        Me.DataGridView1.Size = New System.Drawing.Size(407, 249)
         Me.DataGridView1.TabIndex = 0
         '
         'btninput
         '
-        Me.btninput.Location = New System.Drawing.Point(60, 297)
+        Me.btninput.Location = New System.Drawing.Point(454, 347)
         Me.btninput.Name = "btninput"
         Me.btninput.Size = New System.Drawing.Size(75, 23)
         Me.btninput.TabIndex = 2
@@ -194,7 +314,7 @@ Partial Class Bayar
         '
         'btnsave
         '
-        Me.btnsave.Location = New System.Drawing.Point(176, 297)
+        Me.btnsave.Location = New System.Drawing.Point(557, 347)
         Me.btnsave.Name = "btnsave"
         Me.btnsave.Size = New System.Drawing.Size(75, 23)
         Me.btnsave.TabIndex = 3
@@ -203,7 +323,7 @@ Partial Class Bayar
         '
         'btnedit
         '
-        Me.btnedit.Location = New System.Drawing.Point(292, 297)
+        Me.btnedit.Location = New System.Drawing.Point(671, 347)
         Me.btnedit.Name = "btnedit"
         Me.btnedit.Size = New System.Drawing.Size(75, 23)
         Me.btnedit.TabIndex = 4
@@ -212,7 +332,7 @@ Partial Class Bayar
         '
         'btndelete
         '
-        Me.btndelete.Location = New System.Drawing.Point(60, 336)
+        Me.btndelete.Location = New System.Drawing.Point(454, 397)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(75, 23)
         Me.btndelete.TabIndex = 5
@@ -221,7 +341,7 @@ Partial Class Bayar
         '
         'btncancel
         '
-        Me.btncancel.Location = New System.Drawing.Point(176, 336)
+        Me.btncancel.Location = New System.Drawing.Point(557, 397)
         Me.btncancel.Name = "btncancel"
         Me.btncancel.Size = New System.Drawing.Size(75, 23)
         Me.btncancel.TabIndex = 6
@@ -230,7 +350,7 @@ Partial Class Bayar
         '
         'btnexit
         '
-        Me.btnexit.Location = New System.Drawing.Point(292, 336)
+        Me.btnexit.Location = New System.Drawing.Point(671, 397)
         Me.btnexit.Name = "btnexit"
         Me.btnexit.Size = New System.Drawing.Size(75, 23)
         Me.btnexit.TabIndex = 7
@@ -261,10 +381,10 @@ Partial Class Bayar
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txtidmenu As TextBox
-    Friend WithEvents txtjumlah As TextBox
-    Friend WithEvents txttotal As TextBox
-    Friend WithEvents txtnama As TextBox
+    Friend WithEvents txtsubtotal As TextBox
+    Friend WithEvents txtkodepesanan As TextBox
+    Friend WithEvents txtidkasir As TextBox
+    Friend WithEvents txtjamtransaksi As TextBox
     Friend WithEvents txtkodetransaksi As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
@@ -281,4 +401,16 @@ Partial Class Bayar
     Friend WithEvents btndelete As Button
     Friend WithEvents btncancel As Button
     Friend WithEvents btnexit As Button
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txttotalkembalian As TextBox
+    Friend WithEvents txtfreekembalian As TextBox
+    Friend WithEvents txtkembalian As TextBox
+    Friend WithEvents txtuangbayar As TextBox
+    Friend WithEvents txttotalbayar As TextBox
+    Friend WithEvents txtpajak As TextBox
 End Class

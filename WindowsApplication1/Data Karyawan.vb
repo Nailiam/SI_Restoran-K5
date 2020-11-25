@@ -86,4 +86,5 @@ Public Class Data_Karyawan
             Throw New ApplicationException("Gambar Gagal Masuk")
         End Try
     End Sub
+
 End Class
