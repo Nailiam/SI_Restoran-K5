@@ -24,7 +24,6 @@ Partial Class Data_Menu_Makanan
     Private Sub InitializeComponent()
         Me.lblwelcome = New System.Windows.Forms.GroupBox()
         Me.txtHargamakan = New System.Windows.Forms.TextBox()
-        Me.txtJenismakan = New System.Windows.Forms.TextBox()
         Me.txtIdMakanan = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -38,6 +37,7 @@ Partial Class Data_Menu_Makanan
         Me.DGV = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btn_Minuman = New System.Windows.Forms.Button()
+        Me.cmbJenismakanan = New System.Windows.Forms.ComboBox()
         Me.lblwelcome.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -45,8 +45,8 @@ Partial Class Data_Menu_Makanan
         '
         'lblwelcome
         '
+        Me.lblwelcome.Controls.Add(Me.cmbJenismakanan)
         Me.lblwelcome.Controls.Add(Me.txtHargamakan)
-        Me.lblwelcome.Controls.Add(Me.txtJenismakan)
         Me.lblwelcome.Controls.Add(Me.txtIdMakanan)
         Me.lblwelcome.Controls.Add(Me.Label5)
         Me.lblwelcome.Controls.Add(Me.Label2)
@@ -64,13 +64,6 @@ Partial Class Data_Menu_Makanan
         Me.txtHargamakan.Name = "txtHargamakan"
         Me.txtHargamakan.Size = New System.Drawing.Size(121, 20)
         Me.txtHargamakan.TabIndex = 9
-        '
-        'txtJenismakan
-        '
-        Me.txtJenismakan.Location = New System.Drawing.Point(125, 57)
-        Me.txtJenismakan.Name = "txtJenismakan"
-        Me.txtJenismakan.Size = New System.Drawing.Size(121, 20)
-        Me.txtJenismakan.TabIndex = 8
         '
         'txtIdMakanan
         '
@@ -187,6 +180,15 @@ Partial Class Data_Menu_Makanan
         Me.btn_Minuman.Text = "Form Menu Minuman "
         Me.btn_Minuman.UseVisualStyleBackColor = True
         '
+        'cmbJenismakanan
+        '
+        Me.cmbJenismakanan.FormattingEnabled = True
+        Me.cmbJenismakanan.Items.AddRange(New Object() {"Nasi Goreng", "Nasi Goreng Ati", "Nasi Goreng Spesial", "Bakso", "Bakso Telur", "Nasi Putih", "Ayam Bakar", "Chitato", "Taro", "Happy Tos"})
+        Me.cmbJenismakanan.Location = New System.Drawing.Point(125, 56)
+        Me.cmbJenismakanan.Name = "cmbJenismakanan"
+        Me.cmbJenismakanan.Size = New System.Drawing.Size(121, 21)
+        Me.cmbJenismakanan.TabIndex = 10
+        '
         'Data_Menu_Makanan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -224,6 +226,6 @@ Partial Class Data_Menu_Makanan
     Friend WithEvents DGV As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents txtHargamakan As TextBox
-    Friend WithEvents txtJenismakan As TextBox
     Friend WithEvents btn_Minuman As Button
+    Friend WithEvents cmbJenismakanan As ComboBox
 End Class
