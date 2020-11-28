@@ -42,7 +42,6 @@
 
     End Sub
 
-
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Call MatikanForm()
         Call KosongkanForm()
@@ -130,7 +129,4 @@
         End If
     End Sub
 
-    Private Sub btn_Minuman_Click(sender As Object, e As EventArgs) Handles btn_Minuman.Click
-        Menu_Minuman.Show()
-    End Sub
 End Class
