@@ -6,7 +6,15 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CB76397A-79F2-42C0-929F-DF8D13E27965}</ProjectGuid>
     <OutputType>WinExe</OutputType>
+<<<<<<< HEAD
     <StartupObject>WindowsApplication1.Login</StartupObject>
+=======
+<<<<<<< HEAD
+    <StartupObject>WindowsApplication1.Bayar</StartupObject>
+=======
+    <StartupObject>WindowsApplication1.Data_Menu_Makanan</StartupObject>
+>>>>>>> e3a2062ce41edf6c4372b3941efc6de01609fab4
+>>>>>>> 18941b20ff73e49e51917f222992a8d676b9d531
     <RootNamespace>WindowsApplication1</RootNamespace>
     <AssemblyName>WindowsApplication1</AssemblyName>
     <FileAlignment>512</FileAlignment>
