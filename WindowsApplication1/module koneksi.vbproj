@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CB76397A-79F2-42C0-929F-DF8D13E27965}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>WindowsApplication1.Login</StartupObject>
+    <StartupObject>WindowsApplication1.Data_Menu_Makanan</StartupObject>
     <RootNamespace>WindowsApplication1</RootNamespace>
     <AssemblyName>WindowsApplication1</AssemblyName>
     <FileAlignment>512</FileAlignment>
