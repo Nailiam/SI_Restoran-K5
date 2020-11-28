@@ -87,4 +87,32 @@ Public Class Data_Karyawan
         End Try
     End Sub
 
+    Private Sub btn_cari_Click(sender As Object, e As EventArgs) Handles btn_cari.Click
+        Call HidupkanForm()
+        Dim pegawai = InputBox("Silahkan Masukan ID Karyawan")
+        Try
+            DS.Tables(0).PrimaryKey = New DataColumn() {DS.Tables(0).Columns("id_karyawan")}
+
+            Dim row As DataRow
+            row = DS.Tables(0).Rows.Find(pegawai)
+            txt_id_karyawan.Text = row("id_karyawan")
+            txt_nama_karyawan.Text = row("nama_karyawan")
+            txt_lahir.Text = row("tempat_lahir")
+            DateTimePicker1.Text = row("tgl_lahir")
+            cmb_jk.Text = row("Jenis_Kelamin")
+            cmb_agama.Text = row("agama")
+            txt_hp.Text = row("no_telp")
+            txt_alamat.Text = row("alamat")
+            cmb_status.Text = row("status")
+            txt_foto.Text = row("photo")
+
+            Refresh()
+
+            MsgBox("Pencarian Sukses!")
+            Refresh()
+
+        Catch ex As Exception
+            MsgBox("Anda Salah Memasukkan Id Admin / Id Admin Tersebut Belum Terdaftar!")
+        End Try
+    End Sub
 End Class

@@ -4,18 +4,18 @@
 
     Sub KosongkanForm()
         txtIdMakanan.Text = ""
-        txtJenismakan.Text = ""
+        cmbJenismakanan.Text = ""
         txtHargamakan.Text = ""
         txtIdMakanan.Focus()
     End Sub
     Sub MatikanForm()
         txtIdMakanan.Enabled = False
-        txtJenismakan.Enabled = False
+        cmbJenismakanan.Enabled = False
         txtHargamakan.Enabled = False
     End Sub
     Sub HidupkanForm()
         txtIdMakanan.Enabled = True
-        txtJenismakan.Enabled = True
+        cmbJenismakanan.Enabled = True
         txtHargamakan.Enabled = True
     End Sub
     Sub TampilkanData()
@@ -42,7 +42,6 @@
 
     End Sub
 
-
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Call MatikanForm()
         Call KosongkanForm()
@@ -50,7 +49,7 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If txtIdMakanan.Text = "" Or txtJenismakan.Text = "" Or txtHargamakan.Text = "" Then
+        If txtIdMakanan.Text = "" Or cmbJenismakanan.Text = "" Or txtHargamakan.Text = "" Then
             MsgBox("Data Menu Makanan Belum Lengkap")
             Exit Sub
 
@@ -64,7 +63,7 @@
                 Call koneksiDB()
                 Dim simpan As String
                 simpan = "insert into Menu_Makanan values ('" & txtIdMakanan.Text &
-               "', '" & txtJenismakan.Text & "', '" & txtHargamakan.Text & "')"
+               "', '" & cmbJenismakanan.Text & "', '" & txtHargamakan.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
                 MsgBox("Input Data Sukses")
@@ -80,7 +79,7 @@
     Private Sub DGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellContentClick
         On Error Resume Next
         txtIdMakanan.Text = DGV.Rows(e.RowIndex).Cells(0).Value
-        txtJenismakan.Text = DGV.Rows(e.RowIndex).Cells(1).Value
+        cmbJenismakanan.Text = DGV.Rows(e.RowIndex).Cells(1).Value
         txtHargamakan.Text = DGV.Rows(e.RowIndex).Cells(2).Value
 
         Call HidupkanForm()
@@ -88,14 +87,14 @@
     End Sub
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
-        If txtIdMakanan.Text = "" Or txtJenismakan.Text = "" Or txtHargamakan.Text = "" Then
+        If txtIdMakanan.Text = "" Or cmbJenismakanan.Text = "" Or txtHargamakan.Text = "" Then
             MsgBox("Data Menu Makanan Belum Lengkap")
             Exit Sub
 
         Else
             Call koneksiDB()
             CMD = New OleDb.OleDbCommand(" update Menu_Makanan set Jenis_Makanan = '" &
-           txtJenismakan.Text & "', Harga_Makanan = '" & txtHargamakan.Text & "'  where ID_Makanan ='" & txtIdMakanan.Text & "'", Conn)
+           cmbJenismakanan.Text & "', Harga_Makanan = '" & txtHargamakan.Text & "'  where ID_Makanan ='" & txtIdMakanan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
 
@@ -130,7 +129,4 @@
         End If
     End Sub
 
-    Private Sub btn_Minuman_Click(sender As Object, e As EventArgs) Handles btn_Minuman.Click
-        Menu_Minuman.Show()
-    End Sub
 End Class
